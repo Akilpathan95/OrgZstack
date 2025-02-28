@@ -21,6 +21,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//h1[normalize-space()='Welcome to your Dashboard']")
     WebElement dashboard;
 
+    @FindBy(xpath = "//div[@class='menu-list']//div//div//div[@tabindex='3']")
+    WebElement btnRequisition;
+
     public void clkMyProfile()
     {
         btnMyProfile.click();
@@ -42,6 +45,11 @@ public class HomePage extends BasePage {
             return false;
         }
 
+    }
+
+    public void clkRequisition()
+    {
+        btnRequisition.click();
     }
 
 
