@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class TC002_CreateRequition extends BaseClass {
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = "Master")
     public void verify_Login()
     {
         LoginPage lp=new LoginPage(driver);
@@ -20,7 +20,7 @@ public class TC002_CreateRequition extends BaseClass {
         lp.clkLogin();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = "Master")
     public void click_requisition()
     {
         HomePage hp=new HomePage(driver);
@@ -28,7 +28,7 @@ public class TC002_CreateRequition extends BaseClass {
         hp.clkRequisition();
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = "Master")
     public void click_RequisitionPage()
     {
         RequisitionPage rp=new RequisitionPage(driver);
@@ -38,7 +38,7 @@ public class TC002_CreateRequition extends BaseClass {
         rp.clkCreateRequisitionPopUp();
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = "Master")
     public void fill_NewRequirement()
     {
         Requisition_FormPage form=new Requisition_FormPage(driver);
@@ -71,7 +71,5 @@ public class TC002_CreateRequition extends BaseClass {
         form.enterRemark("Candidate clear the first round");
         form.enterTAT("30");
         form.clkReset();
-
     }
-
 }

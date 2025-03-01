@@ -1,8 +1,5 @@
 package testCases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.HomePage;
@@ -10,8 +7,6 @@ import pageObject.LoginPage;
 import pageObject.PopUps;
 import testBase.BaseClass;
 import utilities.Dataproviders;
-
-import java.time.Duration;
 
 public class TC001_LoginTest extends BaseClass {
 
@@ -24,7 +19,7 @@ public class TC001_LoginTest extends BaseClass {
         lp.clkLogin();
     }
 
-    @Test(dataProvider = "LoginData", dataProviderClass = Dataproviders.class) //Getting dataprovider from different class
+    @Test(dataProvider = "LoginData", dataProviderClass = Dataproviders.class, groups = "Master") //Getting dataprovider from different class
     public void verify_LoginFromData(String email, String pwd, String exp)
     {
         logger.info("**** Starting TC003 LoginDDT started  ****");

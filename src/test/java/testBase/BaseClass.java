@@ -32,7 +32,7 @@ public class BaseClass {
     public Logger logger; //Log4j
     public Properties p;
 
-    @BeforeClass
+    @BeforeClass(groups = "Master")
     @Parameters({"os","browser"})
     public void setup(String os, String br) throws IOException {
 
@@ -102,7 +102,7 @@ public class BaseClass {
 
     }
 
-    //@AfterClass
+    //@AfterClass(groups = "Master")
     public void tearDown()
     {
         driver.quit();
