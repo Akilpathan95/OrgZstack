@@ -1,47 +1,41 @@
-13:46:14.057 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:46:14.060 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:46:14.256 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:46:14.537 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:46:14.538 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
-13:46:27.597 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-13:46:27.599 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-13:46:30.627 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:46:30.628 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:46:30.837 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:46:30.993 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:46:30.993 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
-13:46:44.108 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-13:46:44.109 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-13:46:47.119 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:46:47.119 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:46:47.285 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:46:47.486 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:46:47.486 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
-13:47:00.615 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-13:47:00.616 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-13:47:03.628 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:47:03.629 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:47:03.849 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:47:04.087 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:47:04.087 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
-13:47:09.591 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-13:47:09.592 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-13:47:12.612 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:47:12.612 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:47:12.778 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:47:13.033 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:47:13.033 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
-13:47:26.133 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-13:47:26.134 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-13:47:29.151 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:47:29.151 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:47:29.304 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:47:29.478 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:47:29.478 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
-13:47:42.567 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-13:47:42.567 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-13:47:45.586 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-13:47:45.586 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-13:47:45.782 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
-13:47:46.011 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
-13:47:46.011 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
+15:33:26.456 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:33:29.479 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:33:29.479 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:33:29.894 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
+15:33:30.356 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
+15:33:30.356 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
+15:33:43.409 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:33:43.411 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:33:46.428 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:33:46.429 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:33:46.749 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
+15:33:47.300 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
+15:33:47.301 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
+15:34:00.367 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:34:00.368 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:34:03.383 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:34:03.383 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:34:03.830 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
+15:34:04.347 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
+15:34:04.347 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
+15:34:10.833 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:34:10.835 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:34:13.847 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:34:13.847 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:34:14.226 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
+15:34:14.738 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
+15:34:14.738 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
+15:34:27.862 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:34:27.863 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:34:30.873 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:34:30.873 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:34:31.215 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
+15:34:31.670 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
+15:34:31.670 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****
+15:34:44.729 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:34:44.730 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:34:47.747 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:34:47.748 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:34:48.194 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 password is entering  ****
+15:34:48.682 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Login is done  ****
+15:34:48.682 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop is handeling  ****

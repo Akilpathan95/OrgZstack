@@ -2,9 +2,9 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageObject.BasePage;
 import pageObject.HomePage;
 import pageObject.LoginPage;
-import pageObject.PopUps;
 import testBase.BaseClass;
 import utilities.Dataproviders;
 
@@ -28,7 +28,7 @@ public class TC001_LoginTest extends BaseClass {
         {
             LoginPage lp=new LoginPage(driver);
 
-            PopUps pp=new PopUps(driver);
+            BasePage pp=new BasePage(driver);
             logger.info("**** Starting TC003 Pop-up handled  ****");
             pp.handleAlert();
             logger.info("**** Starting TC003 clearing the field  ****");
