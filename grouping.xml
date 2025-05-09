@@ -21,9 +21,9 @@
 
     <test thread-count="5" name="test">
         <classes>
-            <!--<class name="testCases.TC003_AddBusinessUnit"/> -->
+            <!--<class name="testCases.TC003_AddBusinessUnit"/>
             <class name="testCases.TC004_EditBusinessUnit"/>
-            <class name="testCases.TC005_BusinessUnitContacts"/>
+            <class name="testCases.TC005_BusinessUnitContacts"/> -->
             <class name="testCases.TC006_BusinessUnitAddBasicInfo"/>
             <class name="testCases.TC007_BusinessUnitOnboarding"/>
             <class name="testCases.TC008_MappingBusinessUnit"/>

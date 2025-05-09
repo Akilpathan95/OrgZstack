@@ -344,22 +344,22 @@ public class BusinessUnit_EmployessPage extends BasePage{
 
     public void addAppointmentLetter()
     {
-        fileAppointmentLetter.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        fileAppointmentLetter.sendKeys("C:\\Users\\IPSL\\Documents\\foundit_Sanket-profile.pdf");
     }
 
     public void addExperienceLetter()
     {
-        fileExperienceLetter.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        fileExperienceLetter.sendKeys("C:\\Users\\IPSL\\Documents\\foundit_Shahrookh.Khan-profile.pdf");
     }
 
     public void addSalarySlip()
     {
-        fileSalarySlip.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        fileSalarySlip.sendKeys("C:\\Users\\IPSL\\Documents\\foundit_Abdulkadir.Sadriwala-profile.pdf");
     }
 
     public void addRelievingLetter()
     {
-        fileRelievingLetter.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        fileRelievingLetter.sendKeys("C:\\Users\\IPSL\\Documents\\foundit_Sanket-profile.pdf");
     }
 
     public void clkAdd1()
@@ -477,7 +477,7 @@ public class BusinessUnit_EmployessPage extends BasePage{
 
         WebElement certificate=driver.findElement(By.xpath("(//div[normalize-space()='Certificate']/following::input[@type=\"file\"])[1]"));
 
-        certificate.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        certificate.sendKeys("C:\\Users\\IPSL\\Documents\\foundit_Shahrookh.Khan-profile.pdf");
         btnAdd2.click();
     }
 
