@@ -13,9 +13,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+import pageObject.LoginPage;
 
 import java.io.File;
 import java.io.FileReader;
@@ -32,8 +35,8 @@ public class BaseClass {
     public Logger logger; //Log4j
     public Properties p;
 
-    @BeforeClass(groups = "Master")
     @Parameters({"os","browser"})
+    @BeforeSuite(groups = "Master")
     public void setup(String os, String br) throws IOException {
 
         //Loading config.properties file
@@ -77,7 +80,7 @@ public class BaseClass {
                 case  "edge": capabilities.setBrowserName("MicrosoftEdge"); break;
                 case  "firefox": capabilities.setBrowserName("firefox"); break;
                 default: System.out.println("No matching browser");
-                return;
+                    return;
 
             }
             driver=new RemoteWebDriver(new URL("http://192.168.0.101:4444/wd/hub"), capabilities);
@@ -90,7 +93,7 @@ public class BaseClass {
                 case "edge" : driver=new EdgeDriver(); break;
                 case "firefox" : driver=new FirefoxDriver(); break;
                 default: System.out.println("Invalid browser name....");
-                return;
+                    return;
             }
         }
 
@@ -100,12 +103,26 @@ public class BaseClass {
         driver.get(p.getProperty("appURL")); //Reading url from Properties file.
         driver.manage().window().maximize();
 
+        verify_Login();
     }
 
     //@AfterClass(groups = "Master")
     public void tearDown()
     {
         driver.quit();
+    }
+
+
+    public void verify_Login()
+    {
+        LoginPage lp=new LoginPage(driver);
+        lp.enterEmail(p.getProperty("email"));
+        lp.enterPassword(p.getProperty("password"));
+        lp.clkLogin();
+
+        String expTitle= "Orgzstack";
+        String actTitle=driver.getTitle();
+        Assert.assertTrue(expTitle.equals(actTitle), "Login is not done" + expTitle + ", but found: " + actTitle);
     }
 
     public String randomString()
@@ -126,7 +143,14 @@ public class BaseClass {
         String generatedNumber=RandomStringUtils.randomNumeric(3);
         return (generatedString+"@"+generatedNumber);
     }
-//https://github.com/Akilpathan95/OrgZstack.git
+
+    public String randomStringNumeric()
+    {
+        String generatedString=RandomStringUtils.randomAlphabetic(3);
+        String generatedNumber=RandomStringUtils.randomNumeric(3);
+        return (generatedString +generatedNumber);
+    }
+    //https://github.com/Akilpathan95/AitomOrgzStack.git
     public String captureScreen(String tname) throws IOException
     {
         String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
