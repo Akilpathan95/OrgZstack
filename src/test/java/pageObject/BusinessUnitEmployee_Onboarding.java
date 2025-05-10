@@ -125,7 +125,7 @@ public class BusinessUnitEmployee_Onboarding extends BasePage {
 
     public void addPan()
     {
-        filePan.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        filePan.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Sanket-profile.pdf");
         System.out.println("Pan card photo added");
     }
 
@@ -137,7 +137,7 @@ public class BusinessUnitEmployee_Onboarding extends BasePage {
 
     public void addAadhar()
     {
-        fileAadhar.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        fileAadhar.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Sanket-profile.pdf");
         System.out.println("Aadhar card photo added");
     }
 
@@ -149,7 +149,7 @@ public class BusinessUnitEmployee_Onboarding extends BasePage {
 
     public void addPassport()
     {
-        filePassport.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        filePassport.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Sanket-profile.pdf");
         System.out.println("Passport Photo added");
     }
 
@@ -319,7 +319,7 @@ public class BusinessUnitEmployee_Onboarding extends BasePage {
 
     public void addCancelledCheque()
     {
-        fileCancelCheque.sendKeys("C:\\Users\\IPSL\\Documents\\Akil_Pathan_Resume.pdf");
+        fileCancelCheque.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Sanket-profile.pdf");
         System.out.println("Cancelled cheque added");
     }
 
