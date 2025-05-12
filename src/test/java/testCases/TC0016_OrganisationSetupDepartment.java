@@ -10,6 +10,7 @@ public class TC0016_OrganisationSetupDepartment extends BaseClass {
 
     LeftMenuPage lp;
     OrgSetup_CodePage oc;
+    BasePage bp;
 
     @Test(priority = 2)
     public void verify_AddDepartment()
@@ -23,6 +24,8 @@ public class TC0016_OrganisationSetupDepartment extends BaseClass {
         oc.enterCode("Ak70862"+ randomNumber());
         oc.enterDescrption("testing description");
         oc.clkAdd();
+        bp=new BasePage(driver);
+        bp.handleAlert();
     }
 
     @Test(priority = 3)
@@ -47,6 +50,8 @@ public class TC0016_OrganisationSetupDepartment extends BaseClass {
         oc.enterCode("Ak70862"+ randomNumber());
         oc.enterDescrption("testing description");
         oc.clkAdd();
+        bp=new BasePage(driver);
+        bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
     }

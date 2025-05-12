@@ -90,7 +90,7 @@ public class AddOrganisationInfoPage extends BasePage{
 
     public void selectImage()
     {
-        addImage.sendKeys("C:\\Users\\IPSL\\Downloads\\ipsImage.jfif");
+        addImage.sendKeys("C:\\Users\\IPSL\\Downloads\\ipsImage.jpg");
         bp=new BasePage(driver);
         bp.handleAlert();
     }

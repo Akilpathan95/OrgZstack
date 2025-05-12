@@ -10,6 +10,7 @@ public class TC0014_OrganisationSetupBranches extends BaseClass {
 
     LeftMenuPage lp;
     OrgSetup_CodePage oc;
+    BasePage bp;
 
     @Test(priority = 2)
     public void verify_AddBranch()
@@ -23,6 +24,9 @@ public class TC0014_OrganisationSetupBranches extends BaseClass {
         oc.enterCode("Ak7086" + randomNumber());
         oc.enterCity("Mumbai");
         oc.clkAdd();
+        bp=new BasePage(driver);
+        bp.handleAlert();
+
     }
 
     @Test(priority = 3)
@@ -47,6 +51,8 @@ public class TC0014_OrganisationSetupBranches extends BaseClass {
         oc.enterCode("Ak7086" + randomNumber());
         oc.enterCity("Mumbai");
         oc.clkAdd();
+        bp=new BasePage(driver);
+        bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
     }

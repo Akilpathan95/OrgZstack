@@ -10,6 +10,7 @@ public class TC0015_OrganisationSetupDivision extends BaseClass {
 
     LeftMenuPage lp;
     OrgSetup_CodePage oc;
+    BasePage bp;
 
     @Test(priority = 2)
     public void verify_AddDivision()
@@ -23,6 +24,8 @@ public class TC0015_OrganisationSetupDivision extends BaseClass {
         oc.enterCode("Ak70861" + randomNumber());
         oc.enterDescrption("testing description");
         oc.clkAdd();
+        bp=new BasePage(driver);
+        bp.handleAlert();
     }
 
     @Test(priority = 3)
@@ -35,7 +38,7 @@ public class TC0015_OrganisationSetupDivision extends BaseClass {
         oc.enterCode("Ak7086" + randomNumber());
         oc.enterDescrption("Desciption for Division " + randomString());
         oc.clkUpdate();
-        BasePage bp=new BasePage(driver);
+        bp=new BasePage(driver);
         bp.handleAlert();
     }
 
@@ -47,6 +50,8 @@ public class TC0015_OrganisationSetupDivision extends BaseClass {
         oc.enterCode("Ak70861" + randomNumber());
         oc.enterDescrption("testing description");
         oc.clkAdd();
+        bp=new BasePage(driver);
+        bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
     }

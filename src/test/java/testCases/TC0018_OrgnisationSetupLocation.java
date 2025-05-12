@@ -10,6 +10,7 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
 
     LeftMenuPage lp;
     OrgSetup_CodePage oc;
+    BasePage bp;
 
     @Test(priority = 2)
     public void verify_AddLocation()
@@ -27,7 +28,7 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
         oc.clkSetAddress();
         oc.enterCity("Navi Mumbai");
         oc.clkAdd();
-        BasePage bp=new BasePage(driver);
+        bp=new BasePage(driver);
         bp.handleAlert();
     }
 
@@ -45,7 +46,7 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
         oc.clkSetAddress();
         oc.enterCity("Navi Mumbai");
         oc.clkUpdate();
-        BasePage bp=new BasePage(driver);
+        bp=new BasePage(driver);
         bp.handleAlert();
     }
 
