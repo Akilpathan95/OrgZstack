@@ -1,8 +1,10 @@
 package pageObject;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -190,8 +192,12 @@ public class LeftMenuPage extends BasePage {
     public boolean clientVisible()
     {
         try {
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnClient);
-            Thread.sleep(500); // optional, to allow scroll animation to finish
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({block: 'center'});", btnClient);
+
+            // Optional wait for visibility
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.visibilityOf(btnClient));
             return btnClient.isDisplayed();
         }
         catch (Exception e)
@@ -207,6 +213,7 @@ public class LeftMenuPage extends BasePage {
             clkOrganisationSetup();
         }
         btnClient.click();
+        System.out.println("Client is clickable");
     }
 
     public boolean locationVisible()
