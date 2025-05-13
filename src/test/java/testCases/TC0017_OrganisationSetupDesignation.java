@@ -16,7 +16,6 @@ public class TC0017_OrganisationSetupDesignation extends BaseClass {
     public void verify_AddDesignation()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkDesignation();
         oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
@@ -53,5 +52,6 @@ public class TC0017_OrganisationSetupDesignation extends BaseClass {
         bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
+        bp.handleAlert();
     }
 }

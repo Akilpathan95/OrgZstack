@@ -133,6 +133,8 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     public void clkAddNew()
     {
+        wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(btnAddNew));
         btnAddNew.click();
     }
 

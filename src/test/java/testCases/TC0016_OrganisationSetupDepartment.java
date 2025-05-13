@@ -16,7 +16,6 @@ public class TC0016_OrganisationSetupDepartment extends BaseClass {
     public void verify_AddDepartment()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkDepartment();
         oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
@@ -54,5 +53,6 @@ public class TC0016_OrganisationSetupDepartment extends BaseClass {
         bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
+        bp.handleAlert();
     }
 }

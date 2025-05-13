@@ -16,7 +16,6 @@ public class TC0015_OrganisationSetupDivision extends BaseClass {
     public void verify_AddDivision()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkDivision();
         OrgSetup_CodePage oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
@@ -54,5 +53,6 @@ public class TC0015_OrganisationSetupDivision extends BaseClass {
         bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
+        bp.handleAlert();
     }
 }

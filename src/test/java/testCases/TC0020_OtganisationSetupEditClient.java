@@ -14,7 +14,6 @@ public class TC0020_OtganisationSetupEditClient extends BaseClass {
     public void verify_EditClient()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkClient();
         OrganisationSetup_ClientPage oc=new OrganisationSetup_ClientPage(driver);
         oc.inputSearchClient("Capgemini");

@@ -16,7 +16,6 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
     public void verify_AddLocation()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkLocation();
         OrgSetup_CodePage oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
@@ -67,6 +66,7 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
         bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
+        bp.handleAlert();
         bp.handleAlert();
     }
 }

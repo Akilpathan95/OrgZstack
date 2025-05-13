@@ -15,8 +15,8 @@ public class TC0013_OtganisationSetupZone extends BaseClass {
     @Test(priority = 2)
     public void verify_AddZone()
     {
+
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkZone();
         OrgSetup_CodePage oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
@@ -54,6 +54,7 @@ public class TC0013_OtganisationSetupZone extends BaseClass {
         bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
-
+        Thread.sleep(1000);
+        bp.handleAlert();
     }
 }

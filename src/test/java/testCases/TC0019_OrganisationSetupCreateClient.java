@@ -14,7 +14,6 @@ public class TC0019_OrganisationSetupCreateClient extends BaseClass {
     public void verify_AddClient()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkClient();
         OrganisationSetup_ClientPage oc=new OrganisationSetup_ClientPage(driver);
         oc.clkAddNew();

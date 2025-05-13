@@ -15,7 +15,6 @@ public class TC0021_OrganisationSetupGrade extends BaseClass {
     public void verify_AddGrade()
     {
         lp=new LeftMenuPage(driver);
-        lp.clkOrganisationSetup();
         lp.clkGrade();
         OrgSetup_CodePage oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
@@ -50,5 +49,6 @@ public class TC0021_OrganisationSetupGrade extends BaseClass {
         bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
+        bp.handleAlert();
     }
 }

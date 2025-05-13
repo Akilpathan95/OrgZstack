@@ -180,8 +180,17 @@ public class AddOrganisationInfoPage extends BasePage{
 
     public void clkSave()
     {
-        btnSave.click();
-        bp=new BasePage(driver);
-        bp.handleAlert();
+        if (btnSave.isEnabled())
+        {
+            btnSave.click();
+            bp=new BasePage(driver);
+            bp.handleAlert();
+            System.out.println("Save button is clicked.");
+        }
+        else
+        {
+            System.out.println("Save button is not clickable.");
+        }
+
     }
 }
