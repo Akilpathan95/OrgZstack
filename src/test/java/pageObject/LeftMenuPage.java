@@ -1,9 +1,6 @@
 package pageObject;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -60,6 +57,9 @@ public class LeftMenuPage extends BasePage {
 
     @FindBy(xpath = "//div[text()=\"Business Unit\"]")
     WebElement btnBusinessUnit;
+
+    @FindBy(xpath = "//div[text()='Task Manager']")
+    WebElement btnTaskManager;
 
     public void clkRequisition()
     {
@@ -259,5 +259,18 @@ public class LeftMenuPage extends BasePage {
     public void clkBusinessUnit()
     {
         btnBusinessUnit.click();
+    }
+
+    public void clkTaskManager()
+    {
+        // Locate the scrollable <ul> element
+        WebElement scrollableList = driver.findElement(By.xpath("//ul[contains(@class, 'MuiList-root')]"));
+
+// Scroll down the scrollable div
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollTop = arguments[0].scrollHeight;", scrollableList);
+
+        btnTaskManager.click();
+        System.out.println("Clicked on the Task Manager");
     }
 }

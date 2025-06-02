@@ -27,6 +27,8 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 public class BaseClass {
@@ -49,6 +51,15 @@ public class BaseClass {
 
         // Disable browser notifications
         options.addArguments("--disable-notifications");
+
+        // Allow microphone access
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("profile.default_content_setting_values.media_stream_mic", 1); // 1 = allow
+        options.setExperimentalOption("prefs", prefs);
+
+// Optional: use fake media stream for automation (no real mic needed)
+        options.addArguments("--use-fake-ui-for-media-stream");
+        options.addArguments("--use-fake-device-for-media-stream");
 
         if (p.getProperty("execution_env").equalsIgnoreCase("remote"))
         {

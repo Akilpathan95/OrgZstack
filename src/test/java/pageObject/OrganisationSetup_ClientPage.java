@@ -1,13 +1,11 @@
 package pageObject;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.swing.*;
 import java.time.Duration;
 import java.util.List;
 
@@ -25,7 +23,6 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     @FindBy(xpath = "//input[@name=\"client_name\"]")
     WebElement txtClientName;
-
 
     public WebElement getEditIconByBUName(String buName)
     {
@@ -135,10 +132,6 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     public void clkAddNew()
     {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, 0);"); // Scroll to top of the page
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(btnAddNew));
         btnAddNew.click();
     }
 
@@ -162,7 +155,7 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     public void clkEditBusinessUnit()
     {
-        WebElement clkbuName=getEditIconByBusinessUnit("BU");
+        WebElement clkbuName=getEditIconByBusinessUnit("Testing Te");
         clkbuName.click();
         System.out.println("Clicked on Edit Action");
     }

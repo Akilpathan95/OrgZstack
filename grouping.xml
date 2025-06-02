@@ -21,16 +21,16 @@
 
     <test thread-count="5" name="test">
         <classes>
-           <class name="testCases.TC0012_OrgInfo"/>
-            <class name="testCases.TC0013_OtganisationSetupZone"/>
+            <class name="testCases.TC0022_AddNewTask"/>
+            <!--<class name="testCases.TC0013_OtganisationSetupZone"/>
             <class name="testCases.TC0014_OrganisationSetupBranches"/>
             <class name="testCases.TC0015_OrganisationSetupDivision"/>
             <class name="testCases.TC0016_OrganisationSetupDepartment"/>
             <class name="testCases.TC0017_OrganisationSetupDesignation"/>
             <class name="testCases.TC0018_OrgnisationSetupLocation"/>
-             <class name="testCases.TC0019_OrganisationSetupCreateClient"/>
-             <class name="testCases.TC0020_OtganisationSetupEditClient"/>
-             <class name="testCases.TC0021_OrganisationSetupGrade"/>
+            <class name="testCases.TC0019_OrganisationSetupCreateClient"/>
+            <class name="testCases.TC0020_OtganisationSetupEditClient"/>
+            <class name="testCases.TC0021_OrganisationSetupGrade"/> -->
         </classes>
     </test>
 </suite>
