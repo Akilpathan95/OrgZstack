@@ -113,7 +113,7 @@ public class AddNewTaskPage extends BasePage{
         assignedTo.sendKeys("akil");
         System.out.println("Assigned to search is selected");
 
-        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"akil.pathan@orgzstack.com\"]"));
+        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"akilp1995@gmail.com\"]"));
         selectAssignedTo.click();
         System.out.println("Assigned to is selected");
     }
@@ -152,7 +152,8 @@ public class AddNewTaskPage extends BasePage{
 
     public void selectFile()
     {
-        addFile.sendKeys("C:\\Users\\IPSL\\Downloads\\Motivational.jpg");
+        String path=System.getProperty("user.dir") + "/src/test/resources/ipsImage.jpg";
+        addFile.sendKeys(path);
         System.out.println("File attached");
     }
 

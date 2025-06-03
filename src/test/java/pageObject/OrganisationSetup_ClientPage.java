@@ -17,6 +17,7 @@ public class OrganisationSetup_ClientPage extends BasePage{
     }
 
     WebDriverWait wait;
+    String path;
 
     @FindBy(xpath = "//input[@placeholder=\"Search by client name\"]")
     WebElement txtSearchClient;
@@ -165,7 +166,10 @@ public class OrganisationSetup_ClientPage extends BasePage{
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].style.display='block';", addAgreementCopy.get(0));
-            addAgreementCopy.get(1).sendKeys("C:\\Users\\IPSL\\Downloads\\Akil_Pathan_FinalManual.pdf");
+
+            path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+            addAgreementCopy.get(1).sendKeys(path);
+
             BasePage bp=new BasePage(driver);
             bp.handleAlert();
             System.out.println("Agreement Copy is added");
@@ -322,8 +326,8 @@ public class OrganisationSetup_ClientPage extends BasePage{
     public void selectLogo()
     {
         try {
-            addLogo.get(0).sendKeys("C:\\Users\\IPSL\\Downloads\\ipsImage.jpg");
-            BasePage bp=new BasePage(driver);
+            path=System.getProperty("user.dir") + "/src/test/resources/ipsImage.jpg";
+            addLogo.get(0).sendKeys(path);            BasePage bp=new BasePage(driver);
             bp.handleAlert();
             System.out.println("Logo is added");
         }

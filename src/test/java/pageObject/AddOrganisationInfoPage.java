@@ -90,7 +90,9 @@ public class AddOrganisationInfoPage extends BasePage{
 
     public void selectImage()
     {
-        addImage.sendKeys("C:\\Users\\IPSL\\Downloads\\ipsImage.jpg");
+        String path=System.getProperty("user.dir") + "/src/test/resources/ipsImage.jpg";
+        addImage.sendKeys(path);
+        System.out.println("Image selected");
         bp=new BasePage(driver);
         bp.handleAlert();
     }

@@ -17,6 +17,7 @@ public class BusinessUnit_EmployessPage extends BasePage{
     WebDriverWait wait;
     JavascriptExecutor js;
     Actions actions;
+    String path;
 
     public BusinessUnit_EmployessPage(WebDriver driver)
     {
@@ -173,7 +174,9 @@ public class BusinessUnit_EmployessPage extends BasePage{
 
     public void addProfilePic()
     {
-        selectProfilePic.sendKeys("C:\\Users\\IPSL\\Downloads\\ipsImage.jpg");
+        String path=System.getProperty("user.dir") + "/src/test/resources/ipsImage.jpg";
+        selectProfilePic.sendKeys(path);
+        System.out.println("Image selected");
     }
 
     public void selectSalutation()
@@ -347,22 +350,30 @@ public class BusinessUnit_EmployessPage extends BasePage{
 
     public void addAppointmentLetter()
     {
-        fileAppointmentLetter.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Sanket-profile.pdf");
+        path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+        fileAppointmentLetter.sendKeys(path);
+        System.out.println("Apponintment letter selected");
     }
 
     public void addExperienceLetter()
     {
-        fileExperienceLetter.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Shahrookh.Khan-profile.pdf");
+        path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+        fileExperienceLetter.sendKeys(path);
+        System.out.println("Experience letter selected");
     }
 
     public void addSalarySlip()
     {
-        fileSalarySlip.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Abdulkadir.Sadriwala-profile.pdf");
+        path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+        fileSalarySlip.sendKeys(path);
+        System.out.println("Salary slip selected");
     }
 
     public void addRelievingLetter()
     {
-        fileRelievingLetter.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Sanket-profile.pdf");
+        path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+        fileRelievingLetter.sendKeys(path);
+        System.out.println("Relieving letter selected");
     }
 
     public void clkAdd1()
@@ -480,7 +491,9 @@ public class BusinessUnit_EmployessPage extends BasePage{
 
         WebElement certificate=driver.findElement(By.xpath("(//div[normalize-space()='Certificate']/following::input[@type=\"file\"])[1]"));
 
-        certificate.sendKeys("C:\\Users\\IPSL\\Downloads\\foundit_Shahrookh.Khan-profile.pdf");
+        path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+        certificate.sendKeys(path);
+        System.out.println("Certificate selected");
         btnAdd2.click();
     }
 

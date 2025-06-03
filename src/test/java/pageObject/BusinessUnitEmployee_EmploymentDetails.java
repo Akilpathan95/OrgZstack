@@ -100,12 +100,14 @@ public class BusinessUnitEmployee_EmploymentDetails extends BasePage{
         System.out.println("Insurance PF number is added");
     }
 
-    public void selectFile(String label, int index, String file)
+    public void selectFile(String label, int index)
     {
         String documents = "(//div[normalize-space()='" + label +"']/following::input[@type='file'])[" + index +"]";
         WebElement doc=driver.findElement(By.xpath(documents));
 
-        doc.sendKeys(file);
+        String path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
+
+        doc.sendKeys(path);
         System.out.println("File is added is successfully" + label);
     }
 
