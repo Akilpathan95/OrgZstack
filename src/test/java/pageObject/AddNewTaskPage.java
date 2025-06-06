@@ -1,7 +1,6 @@
 package pageObject;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class AddNewTaskPage extends BasePage{
@@ -11,12 +10,10 @@ public class AddNewTaskPage extends BasePage{
         super(driver);
     }
 
-    Actions actions;
-
     @FindBy(xpath = "//div[normalize-space()='+ Add New Task']")
     WebElement btnAddNewTask;
 
-    @FindBy(xpath = "//span[normalize-space()='Add Tag']")
+    @FindBy(xpath = "(//span[@class='MuiButton-label'])[1]")
     WebElement drpAddTag;
 
     @FindBy(xpath = "//input[@name='title']")
@@ -38,7 +35,9 @@ public class AddNewTaskPage extends BasePage{
     WebElement txtTagName;
 
     @FindBy(xpath = "(//div[contains(@style, 'transparent')])[4]")
-    WebElement addColor;
+    WebElement addColor1;
+    @FindBy(xpath = "(//div[contains(@style, 'transparent')])[6]")
+    WebElement addColor2;
 
     @FindBy(xpath = "//button//span[text()='OK']")
     WebElement btnOK;
@@ -54,6 +53,27 @@ public class AddNewTaskPage extends BasePage{
 
     @FindBy(xpath = "//div[contains(text(),'Create Task')]")
     WebElement btnCreateTask;
+
+    @FindBy(xpath = "(//p[text()='YET TO START']/following::img[@alt='overdue'])[1]")
+    WebElement btnYetToStart;
+
+    @FindBy(xpath = "(//p[normalize-space()='Open Task'])[1]")
+    WebElement btnOpenTask;
+
+    @FindBy(xpath = "//button[normalize-space()='Yet to start']")
+    WebElement btnStatus;
+
+    @FindBy(xpath = "//input[@placeholder='Add Remark']")
+    WebElement txtAddRemark;
+
+    @FindBy(xpath = "//button[normalize-space()='Update Status']")
+    WebElement btnUpdateStatus;
+
+    @FindBy(xpath = "//body/div[@role='presentation']/div/button//*[name()='svg']")
+    WebElement btnCross;
+
+    @FindBy(xpath = "//button[normalize-space()='Edit']")
+    WebElement btnEdit;
 
     public void clkAddNewTask()
     {
@@ -75,14 +95,25 @@ public class AddNewTaskPage extends BasePage{
 
     public void enterTagName(String tagName)
     {
+        txtTagName.sendKeys(Keys.CONTROL + "a");
+        txtTagName.sendKeys(Keys.DELETE);
         txtTagName.sendKeys(tagName);
         System.out.println("Tag Name entered");
     }
 
     public void selectColor()
     {
-        addColor.click();
-        System.out.println("Color select");
+        if (!addColor1.isEnabled())
+        {
+            addColor1.click();
+            System.out.println("Color 1 is selected");
+        }
+        else
+        {
+            addColor2.click();
+            System.out.println("Color 2 is selected");
+        }
+
     }
 
     public void clkOK()
@@ -177,5 +208,65 @@ public class AddNewTaskPage extends BasePage{
     {
         WebElement successMessage=driver.findElement(By.xpath("//h1[normalize-space()='Task Created Successfully !!']"));
         return successMessage.isDisplayed();
+    }
+
+    public void clkYetToStart()
+    {
+        btnYetToStart.click();
+        System.out.println("Clicked on the Yet To Start button");
+    }
+
+    public boolean isYetToStartDisplay()
+    {
+        WebElement popLabel=driver.findElement(By.xpath("//h3[normalize-space()='Yet To Start']"));
+        return popLabel.isDisplayed();
+    }
+
+    public void clkOpenTask()
+    {
+        btnOpenTask.click();
+        System.out.println("Clicked on the Open Task");
+    }
+
+    public void clkStatus()
+    {
+        btnStatus.click();
+        System.out.println("Clicked on the Status button");
+
+        WebElement changeStatus=driver.findElement(By.xpath("//li[normalize-space()='In Progress']"));
+        changeStatus.click();
+        System.out.println("Status is change to In Progress");
+    }
+
+    public void enterAddRemark(String remark)
+    {
+        txtAddRemark.sendKeys(Keys.CONTROL + "a");
+        txtAddRemark.sendKeys(Keys.DELETE);
+        txtAddRemark.sendKeys(remark);
+        System.out.println("Remarks added");
+    }
+
+    public void clkUpdateStatus()
+    {
+        btnUpdateStatus.click();
+        System.out.println("Clicked on the update status and status is successfully changed");
+    }
+
+    public boolean isUpdatedSuccessfullyDisplay()
+    {
+        WebElement popUp=driver.findElement(By.xpath("//h1[normalize-space()='Task Status Updated Successfully !!']"));
+        return popUp.isDisplayed();
+    }
+
+    public void clkCross()
+    {
+        btnCross.click();
+        System.out.println("Clicked on the click button");
+    }
+
+    public void clkEditbutton()
+    {
+        btnEdit.click();
+        System.out.println("Clicked on the Edit button");
     }
 }

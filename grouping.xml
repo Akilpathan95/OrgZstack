@@ -21,7 +21,7 @@
 
     <test thread-count="5" name="test">
         <classes>
-            <class name="testCases.TC0022_AddNewTask"/>
+            <class name="testCases.Testing"/>
             <!--<class name="testCases.TC0013_OtganisationSetupZone"/>
             <class name="testCases.TC0014_OrganisationSetupBranches"/>
             <class name="testCases.TC0015_OrganisationSetupDivision"/>

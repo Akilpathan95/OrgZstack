@@ -46,7 +46,7 @@ public class TC003_AddBusinessUnit extends BaseClass {
         cp.inputTan("C" + randomStringNumeric().toUpperCase() + "12K");
         cp.inputGST("22" + "AB" + randomStringNumeric().toUpperCase() + "F2Z5");
         cp.enterIndustry("IT");
-        //cp.clkSaveClient();
+        cp.clkSaveClient();
         BasePage bp=new BasePage(driver);
         bp.handleAlert();
     }
