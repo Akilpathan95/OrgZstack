@@ -42,8 +42,11 @@ public class AddNewTaskPage extends BasePage{
     @FindBy(xpath = "//button//span[text()='OK']")
     WebElement btnOK;
 
-    @FindBy(xpath = "//div[@id='mui-component-select-priority']")
+    @FindBy(xpath = "//div[@class='css-1lx7dxn']")
     WebElement setPriority;
+
+    @FindBy(xpath = "//div[@class='css-19bb58m']")
+    WebElement drpSelectBusinessUnit;
 
     @FindBy(xpath = "//input[@type='file']")
     WebElement addFile;
@@ -127,9 +130,32 @@ public class AddNewTaskPage extends BasePage{
         setPriority.click();
         System.out.println("Clicked on the priority dropdown");
 
-        WebElement priority=driver.findElement(By.xpath("//li[normalize-space()='Medium']"));
+        WebElement priority=driver.findElement(By.xpath("//div[@id='react-select-2-option-2']"));
         priority.click();
         System.out.println("Priority is selected");
+    }
+
+    public void updatePriority()
+    {
+        WebElement optionValue=driver.findElement(By.xpath("//div[@class='css-ksub72-singleValue']"));
+        String option= optionValue.getText().trim();
+        System.out.println("Currently Selected : " +option);
+
+        setPriority.click();
+        System.out.println("Clicked on the priority dropdown");
+
+        if (option.equalsIgnoreCase("Medium") || option.equalsIgnoreCase("Low"))
+        {
+            setPriority.click();
+            System.out.println("Clicked on the priority dropdown");
+            driver.findElement(By.xpath("//div[@id='react-select-6-option-1']")).click();
+            System.out.println("Priority High is selected");
+        }
+        else
+        {
+            driver.findElement(By.xpath("//div[@id='react-select-6-option-2']")).click();
+            System.out.println("Priority Medium is selcted");
+        }
     }
 
     public void enterTaskTitle(String taskTitle)
@@ -138,13 +164,23 @@ public class AddNewTaskPage extends BasePage{
         System.out.println("Task title is entered");
     }
 
+    public void clkSelectBusinessUnit()
+    {
+        drpSelectBusinessUnit.click();
+        System.out.println("Clicked on the Select Business Unit dropdown");
+
+        WebElement option=driver.findElement(By.xpath("//div[@id='react-select-3-option-2']"));
+        option.click();
+        System.out.println("Business Unit Value is selected from the dropdown");
+    }
+
     public void enterSearchAssignedTo()
     {
         WebElement assignedTo=driver.findElement(By.xpath("//input[@placeholder='Search']"));
-        assignedTo.sendKeys("akil");
+        assignedTo.sendKeys("vdj@576");
         System.out.println("Assigned to search is selected");
 
-        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"akilp1995@gmail.com\"]"));
+        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"vdj@576orgzstack.com\"]"));
         selectAssignedTo.click();
         System.out.println("Assigned to is selected");
     }

@@ -27,6 +27,7 @@ public class Testing extends BaseClass {
         at.clkOK();
         at.selectPriority();
         at.enterTaskTitle("Task Manager Automation");
+        at.clkSelectBusinessUnit();
         at.selectTaskAssignedTo();
         at.enterTaskDescription("Please do this task as early as");
         at.enterTaskStartDate();
@@ -66,6 +67,7 @@ public class Testing extends BaseClass {
         atp.enterTagName("Automation Test Enginer" + " " + randomString());
         atp.selectColor();
         atp.clkOK();
+        atp.updatePriority();
 
     }
 
