@@ -78,6 +78,9 @@ public class AddNewTaskPage extends BasePage{
     @FindBy(xpath = "//button[normalize-space()='Edit']")
     WebElement btnEdit;
 
+    @FindBy(xpath = "//div[contains(text(),'Update Task')]")
+    WebElement btnUpdateTask;
+
     public void clkAddNewTask()
     {
         btnAddNewTask.click();
@@ -130,7 +133,7 @@ public class AddNewTaskPage extends BasePage{
         setPriority.click();
         System.out.println("Clicked on the priority dropdown");
 
-        WebElement priority=driver.findElement(By.xpath("//div[@id='react-select-2-option-2']"));
+        WebElement priority=driver.findElement(By.xpath("//div[text()='Medium']"));
         priority.click();
         System.out.println("Priority is selected");
     }
@@ -146,20 +149,20 @@ public class AddNewTaskPage extends BasePage{
 
         if (option.equalsIgnoreCase("Medium") || option.equalsIgnoreCase("Low"))
         {
-            setPriority.click();
-            System.out.println("Clicked on the priority dropdown");
-            driver.findElement(By.xpath("//div[@id='react-select-6-option-1']")).click();
+            driver.findElement(By.xpath("//div[text()='High']")).click();
             System.out.println("Priority High is selected");
         }
         else
         {
-            driver.findElement(By.xpath("//div[@id='react-select-6-option-2']")).click();
+            driver.findElement(By.xpath("//div[text()='Medium']")).click();
             System.out.println("Priority Medium is selcted");
         }
     }
 
     public void enterTaskTitle(String taskTitle)
     {
+        txtTaskTitle.sendKeys(Keys.CONTROL + "a");
+        txtTaskTitle.sendKeys(Keys.DELETE);
         txtTaskTitle.sendKeys(taskTitle);
         System.out.println("Task title is entered");
     }
@@ -195,6 +198,8 @@ public class AddNewTaskPage extends BasePage{
 
     public void enterTaskDescription(String description)
     {
+        txtTaskDescription.sendKeys(Keys.CONTROL + "a");
+        txtTaskDescription.sendKeys(Keys.DELETE);
         txtTaskDescription.sendKeys(description);
         System.out.println("Task description entered");
     }
@@ -290,6 +295,12 @@ public class AddNewTaskPage extends BasePage{
 
     public boolean isUpdatedSuccessfullyDisplay()
     {
+        WebElement popUp=driver.findElement(By.xpath("//h1[contains(text(), 'Successfully !!')]"));
+        return popUp.isDisplayed();
+    }
+
+    public boolean isTaskUpdatedSuccessfullyDisplay()
+    {
         WebElement popUp=driver.findElement(By.xpath("//h1[normalize-space()='Task Status Updated Successfully !!']"));
         return popUp.isDisplayed();
     }
@@ -304,5 +315,11 @@ public class AddNewTaskPage extends BasePage{
     {
         btnEdit.click();
         System.out.println("Clicked on the Edit button");
+    }
+
+    public void clkUpdateTask()
+    {
+        btnUpdateTask.click();
+        System.out.println("Clicked  on the Update Task button, And Task is updated successfully!");
     }
 }

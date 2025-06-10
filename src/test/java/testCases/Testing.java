@@ -45,10 +45,17 @@ public class Testing extends BaseClass {
         atp.clkYetToStart();
         softAssert=new SoftAssert();
         softAssert.assertTrue(atp.isYetToStartDisplay(), "Yet to Start POP-UP is not open");
+
         atp.clkOpenTask();
-        atp.clkStatus();
-        atp.enterAddRemark("Status successfully changed");
-        atp.clkUpdateStatus();
+        atp.clkEditbutton();
+        atp.selectAddtag();
+        atp.enterTagName("Automation Test Enginer" + " " + randomString().toLowerCase());
+        atp.selectColor();
+        atp.clkOK();
+        atp.updatePriority();
+        atp.enterTaskTitle("Task Manager Update task" + " " + randomString().toLowerCase());
+        atp.enterTaskDescription("This needs to complete in a time");
+        atp.clkUpdateTask();
         boolean target=atp.isUpdatedSuccessfullyDisplay();
 
         if (target==true)
@@ -62,13 +69,19 @@ public class Testing extends BaseClass {
         }
 
         atp.clkOpenTask();
-        atp.clkEditbutton();
-        atp.selectAddtag();
-        atp.enterTagName("Automation Test Enginer" + " " + randomString());
-        atp.selectColor();
-        atp.clkOK();
-        atp.updatePriority();
+        atp.clkStatus();
+        atp.enterAddRemark("Status successfully changed");
+        atp.clkUpdateStatus();
 
+        if (target==true)
+        {
+            atp.clkCross();
+            softAssert.assertTrue(true);
+        }
+        else
+        {
+            softAssert.assertTrue(false);
+        }
     }
 
 }
