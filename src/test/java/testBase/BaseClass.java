@@ -38,7 +38,7 @@ public class BaseClass {
     public Properties p;
 
     @Parameters({"os","browser"})
-    @BeforeSuite(groups = "Master")
+    @BeforeSuite
     public void setup(String os, String br) throws IOException {
 
         //Loading config.properties file

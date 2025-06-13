@@ -27,11 +27,13 @@ public class HomePage extends BasePage {
     public void clkMyProfile()
     {
         btnMyProfile.click();
+        System.out.println("Clicked on My Profile button");
     }
 
     public void clkLogOut()
     {
         btnLogOut.click();
+        System.out.println("Clicked on the LogOut button");
     }
 
     public boolean isMyDashboardExists()
@@ -49,6 +51,7 @@ public class HomePage extends BasePage {
     public void clkRequisition()
     {
         btnRequisition.click();
+        System.out.println("Clicked on the Requisition");
     }
 
 
