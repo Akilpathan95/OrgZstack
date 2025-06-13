@@ -14,10 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pageObject.LoginPage;
 
 import java.io.File;
@@ -39,7 +36,7 @@ public class BaseClass {
 
     @Parameters({"os","browser"})
     @BeforeSuite
-    public void setup(String os, String br) throws IOException {
+    public void setup(@Optional("Windows")String os, @Optional("chrome")String br) throws IOException {
 
         //Loading config.properties file
         FileReader file=new FileReader(".//src/test/resources//config.properties");
