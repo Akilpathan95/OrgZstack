@@ -180,10 +180,10 @@ public class AddNewTaskPage extends BasePage{
     public void enterSearchAssignedTo()
     {
         WebElement assignedTo=driver.findElement(By.xpath("//input[@placeholder='Search']"));
-        assignedTo.sendKeys("vdj@576");
+        assignedTo.sendKeys("akil@576");
         System.out.println("Assigned to search is selected");
 
-        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"vdj@576orgzstack.com\"]"));
+        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"akilp\"]"));
         selectAssignedTo.click();
         System.out.println("Assigned to is selected");
     }
@@ -259,7 +259,7 @@ public class AddNewTaskPage extends BasePage{
 
     public boolean isYetToStartDisplay()
     {
-        WebElement popLabel=driver.findElement(By.xpath("//h3[normalize-space()='Yet To Start']"));
+        WebElement popLabel=driver.findElement(By.xpath("(//p[contains(text(),'YET TO START')])[1]"));
         return popLabel.isDisplayed();
     }
 

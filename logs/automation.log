@@ -1,9 +1,40 @@
-15:48:55.460 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-15:49:00.648 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-15:49:00.648 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-15:49:20.993 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-15:49:20.993 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-15:49:26.162 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-15:49:26.163 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-15:49:46.445 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-15:49:46.446 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:10:58.992 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+15:10:58.997 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+15:10:58.998 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+15:10:59.012 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+15:10:59.031 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+15:10:59.072 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+15:10:59.074 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+15:10:59.088 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+15:10:59.119 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:10:59.120 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:11:04.316 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:11:04.316 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:11:24.756 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:11:24.756 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:11:29.920 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:11:29.920 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:11:50.158 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:11:50.158 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:11:55.331 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:11:55.331 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:12:15.571 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:12:15.571 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:12:20.760 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:12:20.760 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:12:41.058 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:12:41.058 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:12:46.240 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:12:46.240 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:13:06.520 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:13:06.520 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:13:11.720 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:13:11.720 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:13:32.016 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:13:32.017 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:13:37.215 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:13:37.215 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+15:13:57.446 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+15:13:57.446 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+15:14:02.617 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+15:14:02.617 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
