@@ -11,6 +11,7 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="testCases.TC003_AddBusinessUnit"/>
+            <class name="testCases.TC004_EditBusinessUnit"/>
         </classes>
     </test>
 </suite>
