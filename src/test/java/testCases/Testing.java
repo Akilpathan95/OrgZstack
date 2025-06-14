@@ -15,7 +15,7 @@ public class Testing extends BaseClass {
     public void verify_AddNewTask() throws InterruptedException {
         LeftMenuPage lp=new LeftMenuPage(driver);
         lp.clkTaskManager();
-        /*AddNewTaskPage at=new AddNewTaskPage(driver);
+        AddNewTaskPage at=new AddNewTaskPage(driver);
         at.clkAddNewTask();
         softAssert=new SoftAssert();
         softAssert.assertTrue(at.isCreateNewbtnisdisplayed(), "Create Task button is not displaying");
@@ -35,7 +35,20 @@ public class Testing extends BaseClass {
         at.selectFile();
         at.selectAudio();
         at.clkCreateTask();
-        Assert.assertTrue(at.isTaskCreatedSuccessfully(),"Task is not created successfully");*/
+        Assert.assertTrue(at.isTaskCreatedSuccessfully(),"Task is not created successfully");
+        boolean target=at.isSuccessfullyDisplay();
+
+        if (target==true)
+        {
+            at.clkCross();
+            softAssert.assertTrue(true);
+        }
+        else
+        {
+            softAssert.assertTrue(false);
+        }
+
+        at.clkCreateNewCross();
     }
 
     @Test(priority = 3)
@@ -56,7 +69,7 @@ public class Testing extends BaseClass {
         atp.enterTaskTitle("Task Manager Update task" + " " + randomString().toLowerCase());
         atp.enterTaskDescription("This needs to complete in a time");
         atp.clkUpdateTask();
-        boolean target=atp.isUpdatedSuccessfullyDisplay();
+        boolean target=atp.isSuccessfullyDisplay();
 
         if (target==true)
         {

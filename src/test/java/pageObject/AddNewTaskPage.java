@@ -81,6 +81,9 @@ public class AddNewTaskPage extends BasePage{
     @FindBy(xpath = "//div[contains(text(),'Update Task')]")
     WebElement btnUpdateTask;
 
+    @FindBy(xpath = "//h2[normalize-space()='Create New Task']//*[name()='svg']")
+    WebElement btnCreateNewCross;
+
     public void clkAddNewTask()
     {
         btnAddNewTask.click();
@@ -180,10 +183,10 @@ public class AddNewTaskPage extends BasePage{
     public void enterSearchAssignedTo()
     {
         WebElement assignedTo=driver.findElement(By.xpath("//input[@placeholder='Search']"));
-        assignedTo.sendKeys("akil@576");
+        assignedTo.sendKeys("akil");
         System.out.println("Assigned to search is selected");
 
-        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"akilp\"]"));
+        WebElement selectAssignedTo=driver.findElement(By.xpath("//span[text()=\"akilp1995@gmail.com\"]"));
         selectAssignedTo.click();
         System.out.println("Assigned to is selected");
     }
@@ -293,7 +296,7 @@ public class AddNewTaskPage extends BasePage{
         System.out.println("Clicked on the update status and status is successfully changed");
     }
 
-    public boolean isUpdatedSuccessfullyDisplay()
+    public boolean isSuccessfullyDisplay()
     {
         WebElement popUp=driver.findElement(By.xpath("//h1[contains(text(), 'Successfully !!')]"));
         return popUp.isDisplayed();
@@ -321,5 +324,11 @@ public class AddNewTaskPage extends BasePage{
     {
         btnUpdateTask.click();
         System.out.println("Clicked  on the Update Task button, And Task is updated successfully!");
+    }
+
+    public void clkCreateNewCross()
+    {
+        btnCreateNewCross.click();
+        System.out.println("Clicked on the Create New Task Cross button");
     }
 }

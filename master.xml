@@ -10,8 +10,7 @@
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCases.TC003_AddBusinessUnit"/>
-            <class name="testCases.TC004_EditBusinessUnit"/>
+            <class name="testCases.TC0023_UpdateTask"/>
         </classes>
     </test>
 </suite>
