@@ -3,6 +3,9 @@ package pageObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class AddNewTaskPage extends BasePage{
 
     public AddNewTaskPage(WebDriver driver)
@@ -28,7 +31,7 @@ public class AddNewTaskPage extends BasePage{
     @FindBy(xpath = "(//p[contains(text(),'Start')]/following::input[contains(@class, 'MuiOutlinedInput-inputAdornedEnd')])[1]")
     WebElement calTaskStartDate;
 
-    @FindBy(xpath = "(//p[contains(text(),'End')]/following::input[contains(@class, 'MuiOutlinedInput-inputAdornedEnd')])[1]")
+    @FindBy(xpath = "(//p[contains(text(),'End')]/following::input[contains(@class, 'MuiOutlinedInput-inputAdornedEnd')])[last()]")
     WebElement calTaskEndDate;
 
     @FindBy(xpath = "(//span[normalize-space()='Tag Details']/following::input)[1]")
@@ -209,20 +212,26 @@ public class AddNewTaskPage extends BasePage{
 
     public void enterTaskStartDate()
     {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript(
-                "arguments[0].value = '03/06/2025'; arguments[0].dispatchEvent(new Event('input', { bubbles: true }));",
-                calTaskStartDate);
-        System.out.println("Task Start date added");
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String formattedDate = today.format(formatter);
+
+        calTaskStartDate.click(); // brings focus
+        calTaskStartDate.sendKeys(Keys.chord(Keys.CONTROL, "a")); // select all
+        calTaskStartDate.sendKeys(formattedDate);
+        System.out.println("Task Start date added: " + formattedDate);
     }
 
     public void enterTaskendDate()
     {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript(
-                "arguments[0].value = '06/06/2025'; arguments[0].dispatchEvent(new Event('input', { bubbles: true }));",
-                calTaskEndDate);
-        System.out.println("Task End date added");
+        LocalDate endDate = LocalDate.now().plusDays(2);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String formattedDate = endDate.format(formatter);
+
+        calTaskEndDate.click();
+        calTaskEndDate.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        calTaskEndDate.sendKeys(formattedDate);
+        System.out.println("Task End date added: " + formattedDate);
     }
 
     public void selectFile()

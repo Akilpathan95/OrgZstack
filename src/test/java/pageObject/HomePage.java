@@ -21,7 +21,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//h1[normalize-space()='Welcome to your Dashboard']")
     WebElement dashboard;
 
-    @FindBy(xpath = "//div[@class='menu-list']//div//div//div[@tabindex='3']")
+    @FindBy(xpath = "//div[text()='Requisition']")
     WebElement btnRequisition;
 
     public void clkMyProfile()

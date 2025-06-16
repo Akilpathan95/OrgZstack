@@ -25,6 +25,7 @@ public class TC0022_AddNewTask extends BaseClass {
         at.clkOK();
         at.selectPriority();
         at.enterTaskTitle("Task Manager Automation");
+        at.clkSelectBusinessUnit();
         at.selectTaskAssignedTo();
         at.enterTaskDescription("Please do this task as early as");
         at.enterTaskStartDate();

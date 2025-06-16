@@ -11,14 +11,6 @@ import java.time.Duration;
 
 public class TC002_CreateRequition extends BaseClass {
 
-    @Test(priority = 1, groups = "Master")
-    public void verify_Login()
-    {
-        LoginPage lp=new LoginPage(driver);
-        lp.enterEmail(p.getProperty("email"));
-        lp.enterPassword(p.getProperty("password"));
-        lp.clkLogin();
-    }
 
     @Test(priority = 2, groups = "Master")
     public void click_requisition()

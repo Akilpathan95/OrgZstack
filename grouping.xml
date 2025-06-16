@@ -21,8 +21,17 @@
 
     <test thread-count="5" name="test">
         <classes>
-            <class name="testCases.TC0023_UpdateTask"/>
-            <!--<class name="testCases.TC0013_OtganisationSetupZone"/>
+            <class name="testCases.TC003_AddBusinessUnit"/>
+            <class name="testCases.TC004_EditBusinessUnit"/>
+            <class name="testCases.TC005_BusinessUnitContacts"/>
+            <class name="testCases.TC006_BusinessUnitAddBasicInfo"/>
+            <class name="testCases.TC007_BusinessUnitOnboarding"/>
+            <class name="testCases.TC008_MappingBusinessUnit"/>
+            <class name="testCases.TC009_BusinessUnitEmploymentDetails"/>
+            <class name="testCases.TC0010_BusinessUnitSalaryStructure"/>
+            <class name="testCases.TC0011_BusinessUnitRevisedSalaryStructure"/>
+            <class name="testCases.TC0012_OrgInfo"/>
+            <class name="testCases.TC0013_OtganisationSetupZone"/>
             <class name="testCases.TC0014_OrganisationSetupBranches"/>
             <class name="testCases.TC0015_OrganisationSetupDivision"/>
             <class name="testCases.TC0016_OrganisationSetupDepartment"/>
@@ -30,7 +39,9 @@
             <class name="testCases.TC0018_OrgnisationSetupLocation"/>
             <class name="testCases.TC0019_OrganisationSetupCreateClient"/>
             <class name="testCases.TC0020_OtganisationSetupEditClient"/>
-            <class name="testCases.TC0021_OrganisationSetupGrade"/> -->
+            <class name="testCases.TC0021_OrganisationSetupGrade"/>
+            <class name="testCases.TC0022_AddNewTask"/>
+            <class name="testCases.TC0023_UpdateTask"/>
         </classes>
     </test>
 </suite>
