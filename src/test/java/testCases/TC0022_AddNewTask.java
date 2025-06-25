@@ -34,5 +34,6 @@ public class TC0022_AddNewTask extends BaseClass {
         at.selectAudio();
         at.clkCreateTask();
         Assert.assertTrue(at.isTaskCreatedSuccessfully(),"Task is not created successfully");
+        driver.navigate().refresh();
     }
 }

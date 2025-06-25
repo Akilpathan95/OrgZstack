@@ -45,7 +45,7 @@ public class TC006_BusinessUnitAddBasicInfo extends BaseClass {
         be.enterReligion("Indian-Islam");
         be.enterEmail(randomAlphaNumeric().toLowerCase() + "gmail.com");
         be.enterWorkEmail(randomAlphaNumeric().toLowerCase() + "orgzstack.com");
-        be.enterMobileNumber(randomNumber());
+        be.enterMobileNumber("9" + randomNumber());
         be.enterAlternateNumber(randomNumber());
         be.enterEmergencyPersonName(randomString());
         be.enterEmergencyPersonNumber(randomNumber());

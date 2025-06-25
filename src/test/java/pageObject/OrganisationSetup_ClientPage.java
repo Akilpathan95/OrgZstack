@@ -156,7 +156,7 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     public void clkEditBusinessUnit()
     {
-        WebElement clkbuName=getEditIconByBusinessUnit("Testing Te");
+        WebElement clkbuName=getEditIconByBusinessUnit("BU");
         clkbuName.click();
         System.out.println("Clicked on Edit Action");
     }
