@@ -18,8 +18,7 @@ public class TC004_EditBusinessUnit extends BaseClass {
     }
 
     @Test(priority = 4)
-    public void verify_EditBusinessUnit()
-    {
+    public void verify_EditBusinessUnit() {
         OrganisationSetup_ClientPage cp=new OrganisationSetup_ClientPage(driver);
         cp.clkEditBusinessUnit();
         cp.inputClientCode("Informatic-" + randomStringNumeric());

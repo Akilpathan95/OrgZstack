@@ -19,15 +19,13 @@ public class TC006_BusinessUnitAddBasicInfo extends BaseClass {
     }
 
     @Test(priority = 4)
-    public void verify_clkContacts()
-    {
+    public void verify_clkContacts() {
         OrganisationSetup_ClientPage cp=new OrganisationSetup_ClientPage(driver);
         cp.clkEditBusinessUnit();
     }
 
     @Test(priority = 5)
-    public void verify_AddBasicInfo()
-    {
+    public void verify_AddBasicInfo() {
         bp=new BusinessUnitPage(driver);
         bp.clkEmployees();
         be=new BusinessUnit_EmployessPage(driver);

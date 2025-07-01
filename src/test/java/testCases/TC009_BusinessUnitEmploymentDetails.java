@@ -11,8 +11,7 @@ public class TC009_BusinessUnitEmploymentDetails extends BaseClass {
     BasePage basep;
 
     @Test(priority = 3)
-    public void verify_clkBusinessUnit()
-    {
+    public void verify_clkBusinessUnit() {
         lp=new LeftMenuPage(driver);
         lp.clkBusinessUnit();
     }
@@ -25,8 +24,7 @@ public class TC009_BusinessUnitEmploymentDetails extends BaseClass {
     }
 
     @Test(priority = 5)
-    public void verify_EmploymentDetails()
-    {
+    public void verify_EmploymentDetails() {
         BusinessUnitPage bu=new BusinessUnitPage(driver);
         bu.clkEmployees();
         be=new BusinessUnit_EmployessPage(driver);

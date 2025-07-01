@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.swing.*;
 import java.time.Duration;
+import java.util.List;
 
 public class LeftMenuPage extends BasePage {
 
@@ -60,6 +61,9 @@ public class LeftMenuPage extends BasePage {
 
     @FindBy(xpath = "//div[text()='Task Manager']")
     WebElement btnTaskManager;
+
+    @FindBy(xpath = "//div[normalize-space()='Payroll']")
+    List<WebElement> btnPayroll;
 
     public void clkRequisition()
     {
@@ -273,4 +277,49 @@ public class LeftMenuPage extends BasePage {
         btnTaskManager.click();
         System.out.println("Clicked on the Task Manager");
     }
+
+    public void clkPayroll() throws InterruptedException {
+
+        ((JavascriptExecutor)driver).executeScript("document.body.style.zoom='90%';");
+        System.out.println("It is zoomed");
+
+        // Locate the scrollable <ul> element
+        WebElement scrollableList = driver.findElement(By.xpath("//ul[contains(@class, 'MuiList-root')]"));
+
+// Scroll down the scrollable div
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollTop = arguments[0].scrollHeight;", scrollableList);
+
+        System.out.println("Elements displaying on the pages : " +btnPayroll.size());
+        Thread.sleep(2000);
+
+        for (WebElement lists : btnPayroll)
+        {
+            if (lists.isDisplayed())
+            {
+                try {
+
+                    wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+                    wait.until(ExpectedConditions.elementToBeClickable(lists));
+
+                    js=(JavascriptExecutor) driver;
+                    js.executeScript("arguments[0].click();", lists);
+                    System.out.println("Clicked on the Payroll button");
+                    break;
+                }
+                catch (Exception e)
+                {
+                    try {
+                        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", lists);
+                        System.out.println("Clicked using JavaScript due to error: " + e.getMessage());
+                        break;
+                    } catch (Exception jsEx) {
+                        System.out.println("Failed to click element with JS: " + jsEx.getMessage());
+                    }
+                }
+
+            }
+        }
+    }
+
 }

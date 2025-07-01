@@ -12,15 +12,13 @@ public class TC008_MappingBusinessUnit extends BaseClass {
     BasePage basep;
 
     @Test(priority = 3)
-    public void verify_clkBusinessUnit()
-    {
+    public void verify_clkBusinessUnit() {
         lp=new LeftMenuPage(driver);
         lp.clkBusinessUnit();
     }
 
     @Test(priority = 4)
-    public void verify_clkContacts()
-    {
+    public void verify_clkContacts() {
         OrganisationSetup_ClientPage cp=new OrganisationSetup_ClientPage(driver);
         cp.clkEditBusinessUnit();
     }

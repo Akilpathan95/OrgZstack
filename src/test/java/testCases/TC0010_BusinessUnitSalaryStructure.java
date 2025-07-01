@@ -18,15 +18,13 @@ public class TC0010_BusinessUnitSalaryStructure extends BaseClass {
     }
 
     @Test(priority = 4)
-    public void verify_clkContacts()
-    {
+    public void verify_clkContacts() {
         OrganisationSetup_ClientPage cp=new OrganisationSetup_ClientPage(driver);
         cp.clkEditBusinessUnit();
     }
 
     @Test(priority = 9)
-    public void verify_SalaryStructure()
-    {
+    public void verify_SalaryStructure() {
         BusinessUnitPage bu=new BusinessUnitPage(driver);
         bu.clkEmployees();
         be=new BusinessUnit_EmployessPage(driver);

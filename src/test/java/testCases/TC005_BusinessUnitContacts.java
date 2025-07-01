@@ -10,8 +10,7 @@ public class TC005_BusinessUnitContacts extends BaseClass {
     BusinessUnitPage bp;
 
     @Test(priority = 3)
-    public void verify_clkBusinessUnit()
-    {
+    public void verify_clkBusinessUnit() {
         lp=new LeftMenuPage(driver);
         lp.clkBusinessUnit();
     }
@@ -24,8 +23,7 @@ public class TC005_BusinessUnitContacts extends BaseClass {
     }
 
     @Test(priority = 5)
-    public void verify_AddBusinessUnitContacts()
-    {
+    public void verify_AddBusinessUnitContacts() {
         bp=new BusinessUnitPage(driver);
         bp.clkContacts();
         BusinessUnit_ContactsPage bc=new BusinessUnit_ContactsPage(driver);

@@ -25,8 +25,7 @@ public class TC007_BusinessUnitOnboarding extends BaseClass {
     }
 
     @Test(priority = 5)
-    public void verify_Onboarding()
-    {
+    public void verify_Onboarding() {
         BusinessUnitPage bu=new BusinessUnitPage(driver);
         bu.clkEmployees();
         be=new BusinessUnit_EmployessPage(driver);
