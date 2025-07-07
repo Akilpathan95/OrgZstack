@@ -45,6 +45,8 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     public void enterLine2(String line2)
     {
+        txtLine2.sendKeys(Keys.CONTROL + "a");
+        txtLine2.sendKeys(Keys.DELETE);
         txtLine2.sendKeys(line2);
     }
 

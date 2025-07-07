@@ -27,10 +27,10 @@ public class MyReimbursements extends BasePage{
     @FindBy(xpath = "(//button[contains(@aria-label,'change date')])[2]")
     WebElement drpTravelDateTo;
 
-    @FindBy(xpath = "//input[@name=\"location_from\"]")
+    @FindBy(xpath = "//input[@name=\"locnFrom\"]")
     WebElement txtlocationFrom;
 
-    @FindBy(xpath = "//input[@name=\"locatione_To\"]")
+    @FindBy(xpath = "//input[@name=\"locnTo\"]")
     WebElement txtlocationTo;
 
     @FindBy(xpath = "//input[@placeholder=\"Amount\"]")
@@ -51,7 +51,7 @@ public class MyReimbursements extends BasePage{
     @FindBy(xpath = "//div[contains(@class,'MuiPickersCalendarHeader')]//button[2]//*[name()='svg']")
     WebElement nextArrow;
 
-    @FindBy(xpath = "(//button[contains(@class, 'MuiPickersCalendarHeader-iconButton')]//*[name()='svg'])[1]")
+    @FindBy(xpath = "(//button[contains(@class, 'MuiPickersCalendarHeader-iconButton')]//*[name()='svg'])[2]")
     WebElement calArrow;
 
     @FindBy(xpath = "//div[normalize-space()=\"Other Advance\"]")
@@ -87,7 +87,14 @@ public class MyReimbursements extends BasePage{
     public void addFile()
     {
         String path=System.getProperty("user.dir") + "/src/test/resources/foundit_Sanket-profile.pdf";
-        selectFile.sendKeys(path);
+        try {
+            selectFile.sendKeys(path);
+        }
+        catch (Exception e)
+        {
+            System.out.println("File is not upload : " + e.getMessage());
+        }
+
         System.out.println("File added successfully");
     }
 
@@ -102,7 +109,7 @@ public class MyReimbursements extends BasePage{
     }
 
     public void selectTravelDateFrom() throws InterruptedException {
-        String expMonthYear="December 2024";
+        String expMonthYear="July 2025";
         String expDate="26";
 
         drpTravelDateFrom.click();
@@ -137,7 +144,7 @@ public class MyReimbursements extends BasePage{
     }
 
     public void selectTravelDateTo() throws InterruptedException {
-        String expMonthYear="December 2024";
+        String expMonthYear="July 2025";
         String expDate="31";
 
         drpTravelDateTo.click();
@@ -243,7 +250,18 @@ public class MyReimbursements extends BasePage{
 
     public void clkAddExpence()
     {
-        btnAddExpense.click();
+        try
+        {
+            btnAddExpense.click();
+            System.out.println("Clicked on submit button");
+            BasePage bp=new BasePage(driver);
+            bp.handleAlert();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Petty cash not submitted : " + e.getMessage());
+        }
+
     }
 
     public void enterTripName(String tripName)

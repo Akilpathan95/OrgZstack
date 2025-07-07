@@ -1,27 +1,32 @@
-12:01:33.030 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:01:38.164 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:01:38.164 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-12:01:58.346 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-12:01:58.347 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:02:03.432 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:02:03.432 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-12:02:23.608 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-12:02:23.608 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:02:28.724 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:02:28.724 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-12:02:48.904 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-12:02:48.905 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:02:54.037 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:02:54.037 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-12:03:14.205 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-12:03:14.206 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:03:19.355 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:03:19.355 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-12:03:39.496 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-12:03:39.496 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:03:44.595 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:03:44.595 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
-12:04:04.809 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
-12:04:04.809 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
-12:04:09.936 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
-12:04:09.936 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+11:08:02.357 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:08:02.357 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:08:02.357 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:08:02.370 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+11:08:02.380 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:08:02.382 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:08:02.383 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:08:02.389 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+11:08:02.398 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:08:02.402 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:08:02.403 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:08:02.409 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+11:08:02.419 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:08:02.423 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:08:02.423 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:08:02.432 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+11:08:02.441 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+11:08:02.443 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+11:08:02.443 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+11:08:02.453 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+11:08:02.473 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+11:08:02.473 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+11:08:07.632 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+11:08:07.632 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+11:08:27.953 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+11:08:27.953 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+11:08:33.138 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+11:08:33.138 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****
+11:08:53.341 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 LoginDDT started  ****
+11:08:53.342 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 Pop-up handled  ****
+11:08:58.451 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 clearing the field  ****
+11:08:58.451 [main] INFO  testCases.TC001_LoginTest - **** Starting TC003 email is entering  ****

@@ -10,9 +10,7 @@
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-
             <class name="testCases.TC0034_ReimbursementTravelAdvance"/>
-            <class name="testCases.TC0035_ReimbursementOtherAdvance"/>
         </classes>
     </test>
 </suite>

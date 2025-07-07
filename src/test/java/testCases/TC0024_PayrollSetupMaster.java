@@ -28,7 +28,7 @@ public class TC0024_PayrollSetupMaster extends BaseClass {
         rp.clkVariableType();
         rp.clkTAX();
         rp.enterAutoVariableCode("Testing1234");
-        rp.enterVariableName("Testing");
+        rp.enterVariableName("Testing" + randomString());
         rp.enterVariableDescription("This is new Variable for Earning");
         rp.clkSave();
     }
