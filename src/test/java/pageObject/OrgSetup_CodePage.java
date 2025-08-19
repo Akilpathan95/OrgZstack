@@ -55,7 +55,7 @@ public class OrgSetup_CodePage extends BasePage {
     public void clkCompany()
     {
         Select select=new Select(selectCompany);
-        select.selectByVisibleText("Informatic Connecting Tech Pvt.Ltd.");
+        select.selectByVisibleText("INFORMATIC CONNECTING TECH PVT. LTD.");
         System.out.println("Company is select");
     }
 

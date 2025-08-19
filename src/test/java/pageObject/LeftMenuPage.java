@@ -26,31 +26,31 @@ public class LeftMenuPage extends BasePage {
     @FindBy(xpath = "//div[contains(text(),\"Organisation Setup\")]")
     WebElement btnOrganisationSetup;
 
-    @FindBy(xpath = "//div[normalize-space()='ORG.INFO']")
+    @FindBy(xpath = "//div[normalize-space()='Org. Info']")
     WebElement btnOrgInfo;
 
     @FindBy(xpath = "//div[contains(text(),'Reimbursement')]")
     WebElement btnReimbursement;
 
-    @FindBy(xpath = "//li/div[contains(text(), 'ZONE')]")
+    @FindBy(xpath = "//li/div[contains(text(), 'Zone')]")
     WebElement btnZone;
 
-    @FindBy(xpath = "//div[text()='BRANCHES']")
+    @FindBy(xpath = "//li/div[contains(text(), 'Branch')]")
     WebElement btnBranch;
 
-    @FindBy(xpath = "//div[text()='DIVISION']")
+    @FindBy(xpath = "//li/div[contains(text(), 'Division')]")
     WebElement btnDivision;
 
-    @FindBy(xpath = "//div[text()='DEPARTMENT']")
+    @FindBy(xpath = "//li/div[contains(text(), 'Department')]")
     WebElement btnDepartment;
 
-    @FindBy(xpath = "//div[text()='DESIGNATION']")
+    @FindBy(xpath = "//li/div[contains(text(), 'Designation')]")
     WebElement btnDesignation;
 
-    @FindBy(xpath = "//div[text()='CLIENT']")
+    @FindBy(xpath = "//li/div[contains(text(), 'Client')]")
     WebElement btnClient;
 
-    @FindBy(xpath = "//li/div[contains(text(), 'LOCATION')]")
+    @FindBy(xpath = "//li/div[contains(text(), 'location')]")
     WebElement btnLocation;
 
     @FindBy(xpath = "//div[text()='GRADE']")
