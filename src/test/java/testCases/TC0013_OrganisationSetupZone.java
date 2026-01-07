@@ -6,7 +6,7 @@ import pageObject.LeftMenuPage;
 import pageObject.OrgSetup_CodePage;
 import testBase.BaseClass;
 
-public class TC0013_OtganisationSetupZone extends BaseClass {
+public class TC0013_OrganisationSetupZone extends BaseClass {
 
     LeftMenuPage lp;
     OrgSetup_CodePage oc;
