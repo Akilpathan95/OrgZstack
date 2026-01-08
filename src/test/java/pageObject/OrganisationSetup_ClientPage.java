@@ -31,6 +31,42 @@ public class OrganisationSetup_ClientPage extends BasePage{
         return driver.findElement(By.xpath(buNameByName));
     }
 
+    @FindBy(xpath = "(//label[normalize-space()='Country']/following::div[@class=' css-b62m3t-container'])[1]")
+    WebElement selectCountry;
+
+    @FindBy(xpath = "(//label[normalize-space()='State']/following::div[@class=' css-6j8wv5-Input'])[1]")
+    WebElement selectState;
+
+    @FindBy(xpath = "(//label[normalize-space()='City']/following::div[@class=' css-6j8wv5-Input'])[1]")
+    WebElement selectCity;
+
+    public void clkCountry()
+    {
+        selectCountry.click();
+        System.out.println("CLicked on the country dropdown");
+        WebElement country=driver.findElement(By.xpath("//div[normalize-space()='India (IN)']"));
+        country.click();
+        System.out.println("Country selected");
+    }
+
+    public void clkState()
+    {
+        selectState.click();
+        System.out.println("Clicked on the state button");
+        WebElement state=driver.findElement(By.xpath("//div//div//div//div[normalize-space()='Maharashtra']"));
+        state.click();
+        System.out.println("State selected");
+    }
+
+    public void clkCity()
+    {
+        selectCity.click();
+        System.out.println("Clicked on the city dropdown");
+        WebElement city=driver.findElement(By.xpath("//div//div//div//div[normalize-space()='Mumbai']"));
+        city.click();
+        System.out.println("City selected");
+    }
+
     public WebElement getEditIconByBusinessUnit(String buName)
     {
         String buNameByName="//table//tr[td[3][normalize-space()='"+buName+"']]//button//*[name()='svg']";

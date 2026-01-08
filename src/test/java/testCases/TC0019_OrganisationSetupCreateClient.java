@@ -20,11 +20,11 @@ public class TC0019_OrganisationSetupCreateClient extends BaseClass {
         oc.selectLogo();
         oc.inputClientCode(randomString().toLowerCase() + "7086" );
         oc.inputAddress("Goregav" + randomString().toLowerCase());
-        oc.selectCountry();
-        oc.selectState();
-        oc.inputCity("Mumbai" + randomString().toLowerCase());
-        oc.inputPhoneNUmber(randomNumber());
-        oc.inputMobileNumber(randomNumber());
+        oc.clkCountry();
+        oc.clkState();
+        oc.clkCity();
+        oc.inputPhoneNUmber("98" + randomNumberMo());
+        oc.inputMobileNumber("98" + randomNumberMo());
         oc.inputEmail(randomString().toLowerCase() + "@capgemini.com");
         oc.selectSegment();
         oc.inputWebsite(randomString().toLowerCase() + "capgemini.in");

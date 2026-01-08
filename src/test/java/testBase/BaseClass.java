@@ -145,6 +145,12 @@ public class BaseClass {
         return generatedNumber;
     }
 
+    public String randomNumberMo()
+    {
+        String generatedNumber=RandomStringUtils.randomNumeric(8);
+        return generatedNumber;
+    }
+
     public String randomAlphaNumeric()
     {
         String generatedString=RandomStringUtils.randomAlphabetic(3);

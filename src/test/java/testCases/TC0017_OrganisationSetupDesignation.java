@@ -18,9 +18,10 @@ public class TC0017_OrganisationSetupDesignation extends BaseClass {
         lp=new LeftMenuPage(driver);
         lp.clkDesignation();
         oc=new OrgSetup_CodePage(driver);
-        oc.clkCompany();
+        oc.clkBU();
         oc.enterName("Testing" + randomString());
         oc.enterCode("Ak70863" + randomNumber());
+        oc.clkGrade("EXE2");
         oc.enterDescrption("testing description");
         oc.clkAdd();
         bp=new BasePage(driver);
@@ -30,10 +31,11 @@ public class TC0017_OrganisationSetupDesignation extends BaseClass {
     @Test(priority = 3)
     public void verify_EditDesignation() {
         oc = new OrgSetup_CodePage(driver);
-        oc.clkCompany();
+        oc.clkBU();
         oc.enterSearch("Testing");
         oc.clkEdit();
         oc.enterCode("Ak7086" + randomNumber());
+        oc.clkGrade("EXE3");
         oc.enterDescrption("Desciption for Division " + randomString());
         oc.clkUpdate();
         bp = new BasePage(driver);
@@ -43,9 +45,10 @@ public class TC0017_OrganisationSetupDesignation extends BaseClass {
     @Test(priority = 4)
     public void verify_DeleteDesignation() throws InterruptedException {
         oc=new OrgSetup_CodePage(driver);
-        oc.clkCompany();
+        oc.clkBU();
         oc.enterName("Testing Delete");
         oc.enterCode("Ak70863" + randomNumber());
+        oc.clkGrade("EXE2");
         oc.enterDescrption("testing description");
         oc.clkAdd();
         bp=new BasePage(driver);

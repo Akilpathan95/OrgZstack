@@ -16,8 +16,30 @@ public class OrgSetup_CodePage extends BasePage {
         super(driver);
     }
 
+    Select select;
+
     @FindBy (xpath = "//select[@class=\"border-b-2 border-black-500\"]")
     WebElement selectCompany;
+
+    @FindBy(xpath = "(//label[normalize-space()='Business Unit']/following::select)[1]")
+    WebElement selectBU;
+
+    public void clkBU()
+    {
+        select=new Select(selectBU);
+        select.selectByVisibleText("INFORMATIC CONNECTING TECH PVT. LTD.");
+        System.out.println("BU Selected");
+    }
+
+    @FindBy(xpath = "(//label[normalize-space()='Business Unit']/following::select)[2]")
+    WebElement selectGrade;
+
+    public void clkGrade(String grade)
+    {
+        select=new Select(selectGrade);
+        select.selectByVisibleText(grade);
+        System.out.println("Grade added or updated");
+    }
 
     @FindBy(xpath = "(//input[contains(@name, 'name')])[1]")
     WebElement txtName;
@@ -54,7 +76,7 @@ public class OrgSetup_CodePage extends BasePage {
 
     public void clkCompany()
     {
-        Select select=new Select(selectCompany);
+        select=new Select(selectCompany);
         select.selectByVisibleText("INFORMATIC CONNECTING TECH PVT. LTD.");
         System.out.println("Company is select");
     }
