@@ -25,9 +25,11 @@ public class TC0019_OrganisationSetupCreateClient extends BaseClass {
         oc.clkCity();
         oc.inputPhoneNUmber("98" + randomNumberMo());
         oc.inputMobileNumber("98" + randomNumberMo());
-        oc.inputEmail(randomString().toLowerCase() + "@capgemini.com");
+        oc.inputEmail(randomString().toLowerCase() + "@ips.com");
+        oc.clkAcquiredBy();
+        oc.clkAccManager();
         oc.selectSegment();
-        oc.inputWebsite(randomString().toLowerCase() + "capgemini.in");
+        oc.inputWebsite(randomString().toLowerCase() + "ips.in");
         oc.selectServices();
         oc.inputGST("22" + "AB" + randomStringNumeric().toUpperCase() + "F2Z5");
         oc.inputPan("CJ" + randomStringNumeric().toUpperCase() + "1K");
@@ -36,13 +38,14 @@ public class TC0019_OrganisationSetupCreateClient extends BaseClass {
         oc.selectAgreementStartDate("14-08-2023");
         oc.selectAgreementEndDate("14-08-2025");
         oc.inputName("Ghouse" + randomString().toLowerCase());
-        oc.inputEmailID(randomString().toLowerCase() + "@capgemini.com");
+        oc.inputEmailID(randomString().toLowerCase() + "@ips.com");
         oc.inputMobileNo(randomNumber());
         oc.inputDesignation("Testing" + randomString().toLowerCase());
         oc.clkAddSPOC();
-        oc.contractual();
-        oc.permanent();
-        oc.clkSaveClient();
+        oc.contractual("100000", "200000", "7");
+        oc.selectBonus();
+        oc.permanent("20000");
+        oc.clkAdd();
         BasePage bp=new BasePage(driver);
         bp.handleAlert();
     }

@@ -35,9 +35,9 @@ public class TC003_AddBusinessUnit extends BaseClass {
         cp.selectLogo();
         cp.inputAddress("Goregav");
         cp.enterLine2("Vakratunda Society");
-        cp.selectCountry();
-        cp.selectState();
-        cp.inputCity("Mumbai");
+        cp.buCountry1();
+        cp.buState1();
+        cp.buCity1();
         cp.inputPhoneNUmber(randomNumber());
         cp.inputMobileNumber(randomNumber());
         cp.inputEmail(randomString().toLowerCase() + "@orgzstack.com");

@@ -25,9 +25,9 @@ public class TC004_EditBusinessUnit extends BaseClass {
         cp.selectLogo();
         cp.inputAddress("Goregav");
         cp.enterLine2("Vakratunda Society");
-        cp.selectCountry();
+        /*cp.selectCountry();
         cp.selectState();
-        cp.inputCity("Mumbai");
+        cp.inputCity("Mumbai");*/
         cp.inputPhoneNUmber(randomNumber());
         cp.inputMobileNumber(randomNumber());
         cp.inputEmail(randomString().toLowerCase() + "@orgzstack.com");

@@ -67,9 +67,33 @@ public class OrganisationSetup_ClientPage extends BasePage{
         System.out.println("City selected");
     }
 
+    @FindBy(xpath = "(//label[normalize-space()='Acquired By']/following::div[@class=' css-319lph-ValueContainer'])[1]")
+    WebElement selectAcquiredBy;
+
+    @FindBy(xpath = "(//label[normalize-space()='Account Manager']/following::div[@class=' css-319lph-ValueContainer'])[1]")
+    WebElement selectAccManager;
+
+    public void clkAcquiredBy()
+    {
+        selectAcquiredBy.click();
+        System.out.println("Acquired By drop down is opened");
+        WebElement acquired=driver.findElement(By.xpath("//div[normalize-space()='Akil Pathan'][1]"));
+        acquired.click();
+        System.out.println("Acquired By selected");
+    }
+
+    public void clkAccManager()
+    {
+        selectAccManager.click();
+        System.out.println("Account Manager dropdown is opened");
+        WebElement manager=driver.findElement(By.xpath("//div[@id='react-select-6-option-1302']"));
+        manager.click();
+        System.out.println("Account Manager selected");
+    }
+
     public WebElement getEditIconByBusinessUnit(String buName)
     {
-        String buNameByName="//table//tr[td[3][normalize-space()='"+buName+"']]//button//*[name()='svg']";
+        String buNameByName="//table//tr[td[2][normalize-space()='"+buName+"']]//button//*[name()='svg']";
         return driver.findElement(By.xpath(buNameByName));
     }
 
@@ -110,13 +134,13 @@ public class OrganisationSetup_ClientPage extends BasePage{
     @FindBy(xpath = "//input[@name=\"email\"]")
     WebElement txtEmail;
 
-    @FindBy(xpath = "//div[@class=\"w-1/3 ml-2 -mt-2\"]//div[@id=\"demo-simple-select\"]")
+    @FindBy(xpath = "(//label[normalize-space()='Segment']/following::div[@aria-haspopup=\"listbox\"])[1]")
     WebElement drpSegment;
 
     @FindBy(xpath = "//input[@name=\"website\"]")
     WebElement txtWebsite;
 
-    @FindBy(xpath = "//div[@class=\" w-1/3 mt-4\"]//div[@id=\"demo-simple-select\"]")
+    @FindBy(xpath = "(//label[normalize-space()='Services']/following::div[@aria-haspopup=\"listbox\"])[1]")
     WebElement drpServices;
 
     @FindBy(xpath = "//input[@name=\"gstin\"]")
@@ -164,6 +188,9 @@ public class OrganisationSetup_ClientPage extends BasePage{
     @FindBy(xpath = "//button[normalize-space()='Update']")
     WebElement btnUpdate;
 
+    @FindBy(tagName="body")
+    WebElement body;
+
     public void clkUpdate()
     {
         btnUpdate.click();
@@ -187,14 +214,14 @@ public class OrganisationSetup_ClientPage extends BasePage{
 
     public void clkEditAction()
     {
-        WebElement clkbuName=getEditIconByBUName("Capgemini");
+        WebElement clkbuName=getEditIconByBUName("AkilTesting");
         clkbuName.click();
         System.out.println("Clicked on Edit Action");
     }
 
     public void clkEditBusinessUnit()
     {
-        WebElement clkbuName=getEditIconByBusinessUnit("BU");
+        WebElement clkbuName=getEditIconByBusinessUnit("IT123");
         clkbuName.click();
         System.out.println("Clicked on Edit Action");
     }
@@ -315,6 +342,8 @@ public class OrganisationSetup_ClientPage extends BasePage{
         WebElement segment=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()=\"IT Staffing\"]")));
         JavascriptExecutor js=(JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", segment);
+        // After selecting dropdown value
+        body.click();
         System.out.println("Segment added successfully.");
     }
 
@@ -331,6 +360,8 @@ public class OrganisationSetup_ClientPage extends BasePage{
     {
         drpServices.click();
         driver.findElement(By.xpath("//li[normalize-space()=\"Workforce Management\"]")).click();
+        // After selecting dropdown value
+        body.click();
         System.out.println("Workforce Management added");
     }
 
@@ -424,53 +455,161 @@ public class OrganisationSetup_ClientPage extends BasePage{
         System.out.println("Save button is clicked");
     }
 
-    public void contractual()
+    public void contractual(String Monfees, String Soufees, String payTerms)
     {
-        WebElement margin=driver.findElement(By.xpath("(//select[@id='demo-simple-select'])[1]"));
-        Select select=new Select(margin);
-        select.selectByValue("Fixed in Rs");
+        JavascriptExecutor js=(JavascriptExecutor) driver;
 
-        WebElement marginAmount=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[1]"));
-        marginAmount.sendKeys("60000");
+        WebElement monthly=driver.findElement(By.xpath("(//label[normalize-space()='Fee Type']/following::div[@aria-haspopup=\"listbox\"])[1]"));
+        monthly.click();
+        System.out.println("Clicked on the fee type");
+        WebElement feeType=driver.findElement(By.xpath("//li[normalize-space()='Variable in %']"));
+        feeType.click();
+        System.out.println(" Fee type Value select from the dropdown");
+        WebElement fees=driver.findElement(By.xpath("//input[@name='monthlyServiceFee']"));
+        fees.sendKeys(Keys.CONTROL + "a");
+        fees.sendKeys(Keys.DELETE);
+        fees.sendKeys(Monfees);
+        System.out.println("Entered the Monthly fees");
 
-        WebElement sourcing=driver.findElement(By.xpath("(//select[@id='demo-simple-select'])[2]"));
-        Select select1=new Select(sourcing);
-        select1.selectByValue("Fixed in Rs");
+        WebElement sourcing=driver.findElement(By.xpath("(//label[normalize-space()='Fee Type']/following::div[@aria-haspopup=\"listbox\"])[2]"));
+        sourcing.click();
+        System.out.println("Sourcing fee selected");
+        WebElement feeType1=driver.findElement(By.xpath("//li[normalize-space()='Variable in %']"));
+        feeType1.click();
+        System.out.println("Sourcing fee value selected from the dropdown");
+        WebElement fees1=driver.findElement(By.xpath("//input[@name='sourcingFee']"));
+        fees1.sendKeys(Keys.CONTROL + "a");
+        fees1.sendKeys(Keys.DELETE);
+        fees1.sendKeys(Soufees);
+        System.out.println("Entered the sourcing fees");
 
-        WebElement sourcingAmount=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[2]"));
-        sourcingAmount.sendKeys("60000");
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement startDate=driver.findElement(By.xpath("//div[contains(@id,'payrollStartDate')]"));
+        startDate.click();
+        WebElement start=driver.findElement(By.xpath("//li[@data-value='2']"));
+        wait.until(ExpectedConditions.visibilityOf(start));
+        js.executeScript("arguments[0].click();",start);
+        System.out.println("Start date selcted");
 
-        WebElement lifecycle=driver.findElement(By.xpath("//select[@class=\"addclintone\"]"));
-        Select select2=new Select(lifecycle);
-        select2.selectByValue("10");
+        WebElement endDate=driver.findElement(By.xpath("//div[contains(@id,'payrollEndDate')]"));
+        endDate.click();
+        WebElement end=driver.findElement(By.xpath("//li[@data-value='7']"));
+        wait.until(ExpectedConditions.visibilityOf(end));
+        js.executeScript("arguments[0].click();", end);
+        System.out.println("End Date selected");
 
-        WebElement payroll=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[3]"));
-        payroll.sendKeys("120000");
+        WebElement invoice=driver.findElement(By.xpath("//div[contains(@id,'invoiceSubmissionDate')]"));
+        invoice.click();
+        WebElement submissionDate=driver.findElement(By.xpath("//li[@data-value='1']"));
+        wait.until(ExpectedConditions.visibilityOf(submissionDate));
+        js.executeScript("arguments[0].click();", submissionDate);
+        System.out.println("Invoice submission date selcted");
 
-        WebElement date=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[4]"));
-        date.sendKeys("10");
+        WebElement paymentTerms=driver.findElement(By.xpath("//input[@name='paymentTerms']"));
+        paymentTerms.sendKeys(payTerms);
+        System.out.println("Entered Payments Terms");
 
-        WebElement days=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[5]"));
-        days.sendKeys("30");
+        WebElement absorption=driver.findElement(By.xpath("//div[contains(@id,'absorptionFeeApplicable')]"));
+        absorption.click();
+        WebElement absorptionFees=driver.findElement(By.xpath("//li[@data-value='yes']"));
+        absorptionFees.click();
+        System.out.println("Absorption Fees selcted");
+        String selectedValue=absorptionFees.getText();
+        if ("yes".equalsIgnoreCase(selectedValue))
+        {
+            WebElement duration=driver.findElement(By.xpath("//input[@name='absorptionFeeDuration']"));
+            duration.sendKeys(Keys.CONTROL + "a");
+            duration.sendKeys(Keys.DELETE);
+            duration.sendKeys("12");
+            System.out.println("Entered the duration");
+
+            WebElement feetypedrp=driver.findElement(By.xpath("//div[@id='mui-component-select-absorptionFeeType']"));
+            feetypedrp.click();
+
+            WebElement feetypevalue=driver.findElement(By.xpath("//li[@data-value='Variable in %']"));
+            feetypevalue.click();
+            System.out.println("Value select from the Fee Type dropdown");
+
+            WebElement amount=driver.findElement(By.xpath("//input[@name='absorptionFee']"));
+            amount.sendKeys(Keys.CONTROL + "a");
+            amount.sendKeys((Keys.DELETE));
+            amount.sendKeys("10000");
+
+        }
+        else
+        {
+            System.out.println("No new field to print");
+        }
+
     }
 
-    public void permanent()
+    public void permanent(String Monfees)
     {
         WebElement permanent1=driver.findElement(By.xpath("//span[normalize-space()=\"Permanent\"]"));
-        permanent1.click();
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", permanent1);
 
-        WebElement fee=driver.findElement(By.xpath("//select[@id=\"demo-simple-select\"]"));
-        Select select=new Select(fee);
-        select.selectByValue("Fixed in Rs");
+        WebElement monthly1=driver.findElement(By.xpath("(//label[normalize-space()='Fee Type']/following::div[@aria-haspopup=\"listbox\"])[1]"));
+        js.executeScript("arguments[0].scrollIntoView({block:'center',inline:'nearest'});",monthly1);
+        monthly1.click();
+        System.out.println("Clicked on the fee type");
 
-        WebElement feeAmount=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[1]"));
-        feeAmount.sendKeys("1000");
+        WebElement feeType1=driver.findElement(By.xpath("//li[normalize-space()='Variable in %']"));
+        feeType1.click();
+        System.out.println(" Fee type Value select from the dropdown");
 
-        WebElement valueClosure=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[2]"));
-        valueClosure.sendKeys("500");
+        WebElement fees1=driver.findElement(By.xpath("//input[@name='monthlyServiceFee']"));
+        fees1.sendKeys(Keys.CONTROL + "a");
+        fees1.sendKeys(Keys.DELETE);
+        fees1.sendKeys(Monfees);
+        System.out.println("Entered the Monthly fees");
 
-        WebElement replacementClause=driver.findElement(By.xpath("(//input[@placeholder='Enter Amount'])[3]"));
-        replacementClause.sendKeys("500");
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement from=driver.findElement(By.xpath("//div[@id='mui-component-select-from']"));
+        from.click();
+        WebElement fromYear=driver.findElement(By.xpath("//li[@data-value='2']"));
+        wait.until(ExpectedConditions.visibilityOf(fromYear));
+        js.executeScript("arguments[0].click();",fromYear);
+        System.out.println("Experience From selcted");
+
+        WebElement to=driver.findElement(By.xpath("//div[@id='mui-component-select-to']"));
+        to.click();
+        WebElement toYear=driver.findElement(By.xpath("//li[@data-value='7']"));
+        wait.until(ExpectedConditions.visibilityOf(toYear));
+        js.executeScript("arguments[0].click();", toYear);
+        System.out.println("Experience To selected");
+
+        WebElement replacementPeriod=driver.findElement(By.xpath("//input[@name='replacementPeriod']"));
+        replacementPeriod.sendKeys(Keys.CONTROL + "a");
+        replacementPeriod.sendKeys(Keys.DELETE);
+        replacementPeriod.sendKeys("500");
+
+        WebElement invoiceRaised=driver.findElement(By.xpath("//input[@name='invoiceRaised']"));
+        invoiceRaised.sendKeys(Keys.CONTROL + "a");
+        invoiceRaised.sendKeys(Keys.DELETE);
+        invoiceRaised.sendKeys("500");
+
+        WebElement paymentTerms=driver.findElement(By.xpath("//input[@name='paymentTerms']"));
+        paymentTerms.sendKeys("7");
+    }
+
+    @FindBy(xpath = "//select[@name='bonusPayable']")
+    WebElement bonusDrp;
+
+    public void selectBonus()
+    {
+        Select select=new Select(bonusDrp);
+        select.selectByValue("yes");
+        System.out.println("Bonus option is selected");
+    }
+
+    @FindBy(xpath = "//button[normalize-space()='Add']")
+    WebElement btnAdd;
+
+    public void clkAdd()
+    {
+        btnAdd.click();
+        System.out.println("Clicked on the Add button");
     }
 
     public void enterIndustry(String industry)
@@ -478,5 +617,38 @@ public class OrganisationSetup_ClientPage extends BasePage{
         txtIndustry.sendKeys(Keys.CONTROL + "a");
         txtIndustry.sendKeys(Keys.DELETE);
         txtIndustry.sendKeys(industry);
+    }
+
+    @FindBy(xpath = "(//div[@class=' css-319lph-ValueContainer'])[1]")
+    WebElement buCountry;
+
+    @FindBy(xpath = "(//div[@class=' css-319lph-ValueContainer'])[2]")
+    WebElement buState;
+
+    @FindBy(xpath = "(//div[@class=' css-319lph-ValueContainer'])[3]")
+    WebElement buCity;
+
+    public void buCountry1()
+    {
+        buCountry.click();
+        WebElement country=driver.findElement(By.xpath("//div[normalize-space()='India (IN)']"));
+        country.click();
+        System.out.println("Country selected");
+    }
+
+    public void buState1()
+    {
+        buState.click();
+        WebElement state=driver.findElement(By.xpath("//div//div//div//div[normalize-space()='Maharashtra']"));
+        state.click();
+        System.out.println("State selected");
+    }
+
+    public void buCity1()
+    {
+        buCity.click();
+        WebElement city=driver.findElement(By.xpath("//div//div//div//div[normalize-space()='Mumbai']"));
+        city.click();
+        System.out.println("City has been selected");
     }
 }

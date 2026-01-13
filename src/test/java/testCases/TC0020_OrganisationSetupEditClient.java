@@ -6,7 +6,7 @@ import pageObject.LeftMenuPage;
 import pageObject.OrganisationSetup_ClientPage;
 import testBase.BaseClass;
 
-public class TC0020_OtganisationSetupEditClient extends BaseClass {
+public class TC0020_OrganisationSetupEditClient extends BaseClass {
 
     LeftMenuPage lp;
 
@@ -16,7 +16,7 @@ public class TC0020_OtganisationSetupEditClient extends BaseClass {
         lp=new LeftMenuPage(driver);
         lp.clkClient();
         OrganisationSetup_ClientPage oc=new OrganisationSetup_ClientPage(driver);
-        oc.inputSearchClient("Capgemini");
+        oc.inputSearchClient("AkilTesting");
         oc.clkEditAction();
         oc.selectLogo();
         oc.inputClientCode(randomString().toLowerCase() + "7086" );
@@ -41,8 +41,8 @@ public class TC0020_OtganisationSetupEditClient extends BaseClass {
         oc.inputMobileNo(randomNumber());
         oc.inputDesignation("Testing" + randomString().toLowerCase());
         oc.clkAddSPOC();
-        oc.contractual();
-        oc.permanent();
+        //oc.contractual("100000", "200000");
+        oc.permanent("10000");
         oc.clkSaveClient();
         BasePage bp=new BasePage(driver);
         bp.handleAlert();
