@@ -164,6 +164,12 @@ public class BaseClass {
         String generatedNumber=RandomStringUtils.randomNumeric(3);
         return (generatedString +generatedNumber);
     }
+
+    public String randomNum()
+    {
+        String generatedNum=RandomStringUtils.randomNumeric(4);
+        return generatedNum;
+    }
     //https://github.com/Akilpathan95/AitomOrgzStack.git
     public String captureScreen(String tname) throws IOException
     {

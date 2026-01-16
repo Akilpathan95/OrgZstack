@@ -36,6 +36,16 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
     {
         oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
+        oc.enterName("Testing Delete");
+        oc.enterCode("Ak70869" + randomNumber());
+        oc.enterPlaceholder("Koparkhairane");
+        oc.enterDescrption("testing Location");
+        oc.enterRadius("50");
+        oc.clkSetAddress();
+        oc.enterCity("Navi Mumbai");
+        oc.clkAdd();
+        BasePage bp=new BasePage(driver);
+        bp.handleAlert();
         oc.enterSearch("Testing");
         oc.clkEdit();
         oc.enterCode("Ak70869" + randomNumber());
@@ -52,18 +62,8 @@ public class TC0018_OrgnisationSetupLocation extends BaseClass {
     @Test(priority = 4)
     public void verify_DeleteLocation() throws InterruptedException {
         driver.navigate().refresh();
-        OrgSetup_CodePage oc=new OrgSetup_CodePage(driver);
+        oc=new OrgSetup_CodePage(driver);
         oc.clkCompany();
-        oc.enterName("Testing Delete");
-        oc.enterCode("Ak70869" + randomNumber());
-        oc.enterPlaceholder("Koparkhairane");
-        oc.enterDescrption("testing Location");
-        oc.enterRadius("50");
-        oc.clkSetAddress();
-        oc.enterCity("Navi Mumbai");
-        oc.clkAdd();
-        BasePage bp=new BasePage(driver);
-        bp.handleAlert();
         oc.enterSearch("Testing Delete");
         oc.clkDelete();
         bp.handleAlert();

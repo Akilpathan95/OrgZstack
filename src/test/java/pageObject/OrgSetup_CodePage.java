@@ -18,7 +18,7 @@ public class OrgSetup_CodePage extends BasePage {
 
     Select select;
 
-    @FindBy (xpath = "//select[@class=\"border-b-2 border-black-500\"]")
+    @FindBy (xpath = "(//label[normalize-space()='Business Unit']/following::select)[1]")
     WebElement selectCompany;
 
     @FindBy(xpath = "(//label[normalize-space()='Business Unit']/following::select)[1]")
@@ -47,13 +47,13 @@ public class OrgSetup_CodePage extends BasePage {
     @FindBy(xpath = "//input[contains(@name, 'code')]")
     WebElement txtCode;
 
-    @FindBy(xpath = "//input[translate(@name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = 'description']")
+    @FindBy(xpath = "//textarea[@name = 'Description']")
     WebElement txtDescription;
 
     @FindBy(xpath = "//button[starts-with(text(),'Add')]")
     WebElement btnAdd;
 
-    @FindBy(xpath = "//input[@type=\"Number\"]")
+    @FindBy(xpath = "//label[normalize-space()='Radius (Meters)']/following::input[@type=\"number\"]")
     WebElement txtRadius;
 
     @FindBy(xpath = "//input[@name=\"city\"]")
@@ -71,13 +71,22 @@ public class OrgSetup_CodePage extends BasePage {
     @FindBy(xpath = "//button[normalize-space()=\"Update\"]")
     WebElement btnUpdate;
 
-    @FindBy(xpath = "(//button[text()='Delete'])[1]")
+    @FindBy(xpath = "(//button[normalize-space()='Delete'])[1]")
     WebElement btnDelete;
+
+    @FindBy(xpath = "//span[contains(text(), 'VENDOR')]")
+    WebElement btnVendor;
+
+    public void selectVendor()
+    {
+        btnVendor.click();
+        System.out.println("Vendor option on Org Setup page selected");
+    }
 
     public void clkCompany()
     {
         select=new Select(selectCompany);
-        select.selectByVisibleText("INFORMATIC CONNECTING TECH PVT. LTD.");
+        select.selectByVisibleText("Testing Informaticxnrwt");
         System.out.println("Company is select");
     }
 

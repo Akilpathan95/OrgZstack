@@ -50,7 +50,7 @@ public class LeftMenuPage extends BasePage {
     @FindBy(xpath = "//li/div[contains(text(), 'CLIENT')]")
     WebElement btnClient;
 
-    @FindBy(xpath = "//li/div[contains(text(), 'location')]")
+    @FindBy(xpath = "//li/div[contains(text(), 'LOCATION')]")
     WebElement btnLocation;
 
     @FindBy(xpath = "//div[text()='GRADE']")
@@ -64,6 +64,29 @@ public class LeftMenuPage extends BasePage {
 
     @FindBy(xpath = "//div[normalize-space()='Payroll']")
     List<WebElement> btnPayroll;
+
+    @FindBy(xpath = "//li/div[contains(text(), 'VENDOR')]")
+    WebElement btnVendor;
+
+    public boolean designationVendor()
+    {
+        try {
+            return btnVendor.isDisplayed();
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+    public void clkVendor()
+    {
+        if (!designationVendor())
+        {
+            clkOrganisationSetup();
+        }
+        btnVendor.click();
+    }
 
     public void clkRequisition()
     {
