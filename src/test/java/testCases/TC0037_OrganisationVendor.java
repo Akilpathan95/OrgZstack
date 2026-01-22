@@ -47,5 +47,8 @@ public class TC0037_OrganisationVendor extends BaseClass {
         ov.selectMobileNo("98" + randomNumberMo());
         ov.enterDesignatio("Senior Manager" + randomString());
         ov.enterAddSPOC();
+        ov.enterContractual("200000", "400000", "300000", "8", "30");
+        ov.clkPermanent("10", "20000", "15");
+        ov.clkSave();
     }
 }

@@ -3,6 +3,7 @@ package pageObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -15,6 +16,7 @@ public class OrgSetup_VendorPage extends BasePage {
     }
 
     WebDriverWait wait;
+    JavascriptExecutor js;
 
     @FindBy(xpath = "//button[contains(text(), 'ADD NEW')]")
     WebElement btnAddNew;
@@ -109,29 +111,14 @@ public class OrgSetup_VendorPage extends BasePage {
     @FindBy(xpath = "//button[normalize-space()='+ Add SPOC']")
     WebElement btnAddSPOC;
 
-    public void selectEmailId(String emailId)
-    {
-        txtEmailID.sendKeys(emailId);
-        System.out.println("Email Id is entered");
-    }
+    @FindBy(xpath = "//button[normalize-space()='Permanent']")
+    WebElement btnPermanent;
 
-    public void selectMobileNo(String mobile)
-    {
-        txtMobileNo.sendKeys(mobile);
-        System.out.println("Mobile number entered");
-    }
+    @FindBy(xpath = "//select[@id='demo-simple-select']")
+    WebElement selectFeeStructure;
 
-    public void enterDesignatio(String designation)
-    {
-        txtDesignation.sendKeys(designation);
-        System.out.println("Designation entered");
-    }
-
-    public void enterAddSPOC()
-    {
-        btnAddSPOC.click();
-        System.out.println("Add SPOC is entered");
-    }
+    @FindBy(xpath = "//button[normalize-space()='Save']")
+    WebElement btnSave;
 
     public void enterEmail(String email)
     {
@@ -304,6 +291,97 @@ public class OrgSetup_VendorPage extends BasePage {
     {
         txtName.sendKeys(name);
         System.out.println("SPOC Name entered");
+    }
+
+    public void selectEmailId(String emailId)
+    {
+        txtEmailID.sendKeys(emailId);
+        System.out.println("Email Id is entered");
+    }
+
+    public void selectMobileNo(String mobile)
+    {
+        txtMobileNo.sendKeys(mobile);
+        System.out.println("Mobile number entered");
+    }
+
+    public void enterDesignatio(String designation)
+    {
+        txtDesignation.sendKeys(designation);
+        System.out.println("Designation entered");
+    }
+
+    public void enterAddSPOC()
+    {
+        btnAddSPOC.click();
+        System.out.println("Add SPOC is entered");
+    }
+
+    public void enterContractual(String paymentM1, String sourcingS1, String payrollPayment, String date, String days)
+    {
+        WebElement monthly= driver.findElement(By.xpath("(//p[contains(normalize-space(), 'Monthly')]/following::div[@aria-haspopup='listbox'])[1]"));
+        monthly.click();
+        WebElement selectM= driver.findElement(By.xpath("//li[normalize-space()= 'Variable in %']"));
+        selectM.click();
+        System.out.println("Contracting Margin on Monthly Basis selected");
+        WebElement paymentM= driver.findElement(By.xpath("(//p[contains(normalize-space(), 'Monthly')]/following::input[@placeholder='Enter Amount'])[1]"));
+        paymentM.sendKeys(paymentM1);
+        System.out.println("Contracting Margin on Monthly Basis Amount entered");
+
+        WebElement sourcing=driver.findElement(By.xpath("(//p[contains(normalize-space(), 'Sourcing')]/following::div[@aria-haspopup='listbox'])[1]"));
+        sourcing.click();
+        WebElement sourcingS=driver.findElement(By.xpath("//li[normalize-space()='Fixed in Rs']"));
+        sourcingS.click();
+        System.out.println("One Time Sourcing Fee selected");
+        WebElement paymentS=driver.findElement(By.xpath("(//p[contains(normalize-space(), 'Sourcing')]/following::input[@placeholder='Enter Amount'])[1]"));
+        paymentS.sendKeys(sourcingS1);
+        System.out.println("One Time Sourcing Fee amount entered");
+
+        WebElement lifecycle=driver.findElement(By.xpath("//p[contains(normalize-space(), 'Lifecycle')]/following::div[@aria-haspopup='listbox']"));
+        lifecycle.click();
+        WebElement lifecycleL=driver.findElement(By.xpath("//li[@data-value='7']"));
+        lifecycleL.click();
+        System.out.println("Employee Avg. Lifecycle ( Month ) selected");
+        WebElement Payrollcycle=driver.findElement(By.xpath("(//p[contains(normalize-space(), 'Lifecycle')]/following::input[@placeholder='Enter Amount'])[1]"));
+        Payrollcycle.sendKeys(payrollPayment);
+        System.out.println("Payroll cycle amount entered");
+
+        WebElement paymentDate=driver.findElement(By.xpath("(//p[contains(normalize-space(),'Date')]/following::input)[1]"));
+        paymentDate.sendKeys(date);
+        System.out.println("Payment Date entered");
+
+        WebElement paymentDays=driver.findElement(By.xpath("(//p[contains(normalize-space(),'Days')]/following::input)[1]"));
+        paymentDays.sendKeys(days);
+        System.out.println("Payment days entered");
+    }
+
+    public void clkPermanent(String feeSAmount, String valueClosure, String replacementClause)
+    {
+        js=(JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", btnPermanent);
+        //btnPermanent.click();
+
+        Select select=new Select(selectFeeStructure);
+        select.selectByValue("Variable in %");
+        System.out.println("Fee Structure value is selected");
+
+        WebElement feeAmount=driver.findElement(By.xpath("(//div[normalize-space()='1. Fee Structure']/following::input)[1]"));
+        feeAmount.sendKeys(feeSAmount);
+
+        WebElement perClosure=driver.findElement(By.xpath("(//div[contains(normalize-space(), 'Closure')]/following::input)[1]"));
+        perClosure.sendKeys(valueClosure);
+        System.out.println("Value per closure entered");
+
+        WebElement replacement=driver.findElement(By.xpath("(//div[contains(normalize-space(), 'Clause')]/following::input)[1]"));
+        replacement.sendKeys(replacementClause);
+        System.out.println("Replacement Clause (No. of Days) entered");
+    }
+
+    public void clkSave()
+    {
+        js=(JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", btnSave);
+        System.out.println("Clicked on the save button");
     }
 
 }
